@@ -1,216 +1,90 @@
-SURF REPORT LIVE — LESSON WINDOWS (BEST / CONDITIONAL / AVOID) — UI + DATA HANDOFF (machine-facing)
+SURF REPORT LIVE — HOUR-BY-HOUR CONDITIONAL / AVOID LABELS — HANDOFF (machine-facing)
 
-Paste this whole document into the receiving chat. It is a specification, not a conversation. Follow it literally. It EXTENDS the existing "SURF REPORT LIVE — UI + BUILD HANDOFF". Where this document and that one conflict on lesson windows or hour labels, THIS document wins. Everything else in the original handoff stays unchanged.
+Paste this whole document into the receiving chat. It is a specification, not a conversation. Follow it literally.
 
 0. TASK
 
-Upgrade the Report screen's "Best window" card and "Timing through the day" strip so a day can carry up to three kinds of lesson window:
+Add CONDITIONAL and AVOID ratings to the hour strip in "Timing through the day" on the Report screen (6 AM–6 PM). That is the ONLY change.
 
-	•	BEST: the best available time for a beginner lesson.
-	•	CONDITIONAL: workable only if on-beach checks pass.
-	•	AVOID: not recommended for beginners.
+1. SCOPE — CHANGE NOTHING ELSE
 
-Today the app shows exactly one best window and labels hours from wind bands only. After this change it shows all windows the day's data provides, and every hour from 6 AM to 6 PM is labeled by the window it falls in.
+	•	MUST NOT change the Best window card, the BEST hour, its star, its default selection, or how BEST is decided.
+	•	MUST NOT change the hero card, Conditions row, tide chart, energy chart, compasses, map, emergency section, Forecast, Weather, Settings, Glossary, How it decides, References, palettes, fonts, layout or section order.
+	•	MUST NOT add cards, pagers, sections or buttons.
+	•	MUST NOT remove the existing wind-band labels (Lower impact / Moderate / More active). They stay for every hour that is not inside a Conditional or Avoid window.
+	•	Tomorrow keeps its current behavior (strip hidden, note shown). No change.
 
-Source: this pattern is already built and working in the Hawaii Soul Surfer Ops app (repo hawsurfb/experience-app, folder ops/, functions renderWindows, winHTML, hourWin, buildHours, renderHours in ops/src/app.js). Match its behavior.
-
-1. SOURCE-OF-TRUTH RULES
-
-	1.	The original Surf Report Live handoff still decides layout, tokens, type and spacing.
-	2.	This document decides window data, hour labeling, colors per rating, and copy for windows.
-	3.	If a value is missing, do not invent it. Render the empty state in section 8.
-	4.	Do not change the order of Report sections. Windows stay where the Best window card is now; the timing strip stays where it is now.
-	5.	Surf Report Live is the PUBLIC app. Instructor-only fields (section 2.3) MUST NOT render in it.
-
-2. DATA
-
-2.1 Shape (add to each day object of the report, e.g. report.today and report.tomorrow)
+2. DATA (add to the Today day object only)
 
 "windows": [
-  {
-    "start": "09:00",               // 24 h HH:MM, Hawaii time. REQUIRED.
-    "end": "10:30",                 // 24 h HH:MM, Hawaii time, end > start. REQUIRED.
-    "rating": "BEST",               // "BEST" | "CONDITIONAL" | "AVOID". REQUIRED.
-    "label": "Best available",      // short phrase, <= 24 chars. REQUIRED.
-    "go": "Go, conditional",        // short verdict, <= 28 chars. OPTIONAL.
-    "reasons": ["Rising tide", "Canoes 1–2 ft", "Favorable ENE wind"],   // 1–5 short phrases. REQUIRED.
-    "precheck": ["Several complete set cycles", "Water clarity"],        // OPTIONAL. 0–4 short phrases.
-    "workable_for": ["Strong, confident adult"],                          // OPTIONAL. AVOID windows only.
-    "avoid_for": ["Children", "Nervous beginners", "Weak swimmers"]       // OPTIONAL. AVOID windows only.
-  }
+  { "start": "10:30", "end": "12:30", "rating": "CONDITIONAL", "reason": "Long-period energy at peak; set current may increase" },
+  { "start": "12:30", "end": "15:00", "rating": "AVOID",       "reason": "Regional South Shore 6–8 ft; more current and sets reaching the inside" }
 ]
 
-2.2 Data rules
+	•	start, end: 24 h "HH:MM" strings, Hawaii time. end > start. REQUIRED.
+	•	rating: "CONDITIONAL" | "AVOID". REQUIRED. Any other value: ignore that window (do not render, log console.warn).
+	•	reason: one short sentence, <= 90 chars. REQUIRED.
+	•	Windows MUST NOT overlap. Gaps are allowed.
+	•	If "windows" is missing or empty, the strip renders exactly as it does today.
 
-	•	0–1 BEST window per day. 0–n CONDITIONAL and 0–n AVOID windows.
-	•	Windows MUST NOT overlap. If the source data overlaps, keep the earlier window's end and drop the overlap from the later one.
-	•	Windows need not cover 6 AM–6 PM. Gaps are allowed and render as "Not rated" (section 5).
-	•	Times are wall-clock Hawaii time strings. Do not convert to UTC. Do not store Date objects.
-	•	"rating" is the only field that drives color, star and label. Never infer a rating from reasons text.
-	•	If "windows" is absent or empty, the app MUST NOT fall back to inventing a window. Use section 8.
-
-2.3 Fields that exist in the Ops app but MUST NOT appear in Surf Report Live
-
-	effort (student/coach), notes, any text addressed to the instructor ("you", "your students"), field_test, decisive, no_go lists, avoid_triggers. If present in the data, ignore them.
-
-3. TOKENS (reuse existing palette variables; no new colors)
-
-rating	accent var	eyebrow label	icon in card	clock color in strip	label color in strip
-BEST	--best	Best window	16px filled star in --best	--best	--best
-CONDITIONAL	--call	Conditional window	.7rem solid dot in --call	--call	--call
-AVOID	--adv	Avoid window	.7rem solid dot in --adv	--adv	--adv
-(none)	—	—	—	--mute, whole button opacity .55	--mute
-
-Both palettes (Night Reef and Surf) already define --best, --call, --adv; no palette edits needed.
-
-4. WINDOW CARDS (replaces the single Best window card)
-
-4.1 Placement and paging
-
-	•	Keep the existing best-window pager and its Today/Tomorrow day sync EXACTLY as in the original handoff (§6.5): swiping it still changes the day, and it still moves together with the hero pager.
-	•	Inside each day slide, render the day's windows as a vertical stack, in this order: BEST, then CONDITIONAL (by start time), then AVOID (by start time). Gap .75rem between cards.
-	•	Do NOT make a second horizontal pager for windows. Two nested sideways swipes on one card conflict with the day swipe.
-	•	TOMORROW slide: render only the BEST window card with the existing low-confidence note ("Low-confidence best time. It will be much more accurate if we do it the day of."). Do not render CONDITIONAL or AVOID cards for tomorrow.
-
-4.2 BEST card (unchanged look)
-
-	•	Exactly the existing .win.winbest card: --win fill, 1px border color-mix(in srgb,var(--best) 55%,transparent), glow box-shadow 0 0 28px color-mix(in srgb,var(--best) 13%,transparent), radius 1.75rem, padding 1.5rem (2rem sides), column gap .6rem.
-	•	Row: 16px star + eyebrow "Best window" (tomorrow: "Best window · tomorrow").
-	•	Time: formatted range (section 6), Bricolage 800 3.4rem, --best.
-	•	Line: "{label}" + (go ? " · {go}" : ""), 1.1rem.
-	•	Reasons line: reasons joined with " · ", .9rem, --mute, line-height 1.45.
-	•	Precheck (if any): after a 1px hairline (color-mix(in srgb,var(--fg) 15%,transparent)), .85rem --mute: "Check first: {precheck joined with ', ', lowercased}."
-	•	Footer: "Confidence: {confidence}" .85rem --mute (keep existing).
-
-4.3 CONDITIONAL and AVOID cards (new, smaller)
-
-	•	Same structure and radius as the BEST card but: fill --cardbg; border 1px color-mix(in srgb,var(ACCENT) 50%,transparent); NO glow; padding 1.1rem 1.25rem (1.75rem sides to clear the chevron); gap .45rem.
-	•	Row: .7rem solid dot in ACCENT + eyebrow "Conditional window" or "Avoid window".
-	•	Time: Bricolage 800 2.4rem, color ACCENT.
-	•	Line: "{label}" + (go ? " · {go}" : ""), 1rem.
-	•	Reasons line: as 4.2.
-	•	AVOID only, if present:
-		•	"Maybe workable for {workable_for joined ', ', lowercased}" — .9rem --mute, prefix bold --fg.
-		•	"Reschedule for {avoid_for joined ', ', lowercased}" — .9rem --mute, prefix bold --fg.
-	•	Precheck: as 4.2.
-	•	ACCENT = --call for CONDITIONAL, --adv for AVOID.
-
-4.4 Accessibility
-
-	•	Each card is a static region, not a button. No tap action.
-	•	Each card has aria-label "{Best|Conditional|Avoid} window, {formatted range}".
-
-5. TIMING THROUGH THE DAY (hour strip)
-
-5.1 Which window an hour belongs to (pure function; implement exactly)
-
-	hourWin(h):            // h = integer hour 6..18; the hour covers [h, h+1)
-	  best = null; ov = 0
-	  for each window w:
-	    a = hours(w.start); b = hours(w.end)        // "09:30" -> 9.5
-	    o = min(b, h+1) - max(a, h)                 // overlap in hours
-	    if o > ov + 1e-9: ov = o; best = w          // largest overlap wins; ties keep the earlier window
-	  return ov >= 0.5 ? best : null                // an hour needs at least 30 min inside a window
-
-Examples with windows 09:00–10:30 BEST, 10:30–12:30 CONDITIONAL, 12:30–15:00 AVOID:
-	9 AM → BEST · 10 AM → BEST (10:00–10:30 is BEST 0.5 h, CONDITIONAL 0.5 h; tie keeps the earlier, BEST) · 11 AM → CONDITIONAL · 12 PM → CONDITIONAL (0.5 h each; tie keeps the earlier) · 1 PM, 2 PM → AVOID · 3 PM → none · 6–8 AM → none.
-
-5.2 Hour button (keep existing geometry: 13 buttons, 6 AM–6 PM, width 4.9rem, min-height 5.75rem)
-
-	•	Clock icon color and label color per section 3.
-	•	Label text: "Best window" | "Conditional" | "Avoid" | "Not rated".
-	•	Star: the 12px --best star at top-right appears on EVERY hour whose window is BEST (not only one hour).
-	•	Hours with no window: whole button opacity .55, label "Not rated", clock --mute. They stay tappable.
-	•	aria-label: "{time}, {label}".
-	•	Selected state unchanged (2px bottom border --link). The selected clock keeps its RATING color, not --link, so the rating stays visible.
-
-5.3 Default selection
-
-	•	Select the FIRST hour whose window is BEST and center it on load.
-	•	If there is no BEST window, select the first hour of the first CONDITIONAL window.
-	•	If there are no windows, select 9 AM.
-
-5.4 Detail block under the strip (replaces the wind-only sentence)
-
-	Line 1 (bold, --fg): "{time} · {label}" + (window ? " · {formatted window range}" : "")
-	Line 2 (.9rem --mute):
-		window present: "{w.label}" + (w.go ? ". " + w.go : "") + ". " + reasons joined ", " + ". " + TIDE_NOTE
-		window absent:  "Outside the lesson windows for this day. " + TIDE_NOTE
-	TIDE_NOTE: keep the existing tide-note rule from the original handoff §6.6.
-	The forecast wind for the hour MAY follow as a last sentence: "Forecast wind {mph} mph." Never use wind to set the label.
-
-5.5 Retire the wind-band labels
-
-	•	"Lower impact / Moderate / More active" labels are REMOVED from the strip. Wind no longer rates hours.
-	•	Update the Glossary: delete the "Lower impact, Moderate, More active" entry; add:
-		•	Best window: "The best available time for a beginner lesson on the day's data. It can be wrong if the water doesn't match."
-		•	Conditional window: "Workable only if what you see on the beach checks out. The report lists what to check."
-		•	Avoid window: "Not recommended for beginners. Some strong, confident adults may still manage it."
-		•	Not rated: "Outside the lesson windows for this day."
-	•	Update "How the app decides" → "How hours are labeled" to: "Each hour takes the label of the lesson window it falls in: Best, Conditional or Avoid. An hour needs at least half of it inside a window. Hours outside every window show as Not rated."
-
-5.6 Tomorrow
-
-	Keep the original behavior: hide the strip and show "Hour-by-hour timing shows up on the day, once the forecast is close enough to trust."
-
-6. TIME FORMATTING (implement exactly)
+3. WHICH HOUR GETS WHICH RATING (implement exactly)
 
 	hours("HH:MM") = HH + MM/60
-	short(t) = (h%12 || 12) + (m ? ":" + two-digit m : "")
-	range(start, end):
-		if both AM or both PM:  "{short(a)}–{short(b)} {AM|PM}"        e.g. "9–10:30 AM"
-		else:                   "{short(a)} {A}–{short(b)} {B}"         e.g. "10:30 AM–12:30 PM"
-	Use an en dash (–), no spaces. 12:30 is PM. 12:00 noon is "12 PM".
 
-7. TIDE CHART LINK (optional, recommended)
+	hourRating(h):                 // h = 6..18; the hour button covers [h, h+1)
+	  pick = null; ov = 0
+	  for each window w in windows:
+	    a = hours(w.start); b = hours(w.end)
+	    if a is NaN or b is NaN or b <= a: continue
+	    o = min(b, h+1) - max(a, h)       // overlap in hours
+	    if o > ov + 1e-9: ov = o; pick = w   // largest overlap wins; ties keep the earlier window
+	  return ov >= 0.5 ? pick : null       // needs at least 30 minutes inside the window
 
-	On "Today's tide" (Today panel only), shade the BEST window as a rect from x(start) to x(end), full plot height, fill --best opacity .10, with the text "Best window" (11px, 600, --best) centered under the x-axis labels. Do not shade CONDITIONAL or AVOID.
+	Precedence per hour:
+	  1. If the hour is the existing BEST hour → unchanged (BEST wins over everything).
+	  2. Else if hourRating(h) returns a window → that window's rating.
+	  3. Else → existing wind-band label, unchanged.
 
-8. EMPTY AND ERROR STATES
+	Worked example with the sample data: 6–9 AM wind labels (unchanged) · 10 AM BEST (unchanged) · 11 AM CONDITIONAL · 12 PM CONDITIONAL (tie 0.5/0.5 keeps the earlier window) · 1 PM AVOID · 2 PM AVOID · 3–6 PM wind labels (unchanged).
 
-	•	windows missing or []: the Today slide shows one card with --cardbg fill, eyebrow "Lesson windows", time text "Not rated" in --mute, line "No lesson windows in this report." Every hour in the strip shows "Not rated".
-	•	A window with an invalid start/end (unparseable, or end <= start): skip that window and log a console warning. Do not show a broken card.
-	•	Never show a window with a rating the app does not recognize; skip it.
+4. HOUR BUTTON APPEARANCE (only for CONDITIONAL / AVOID hours)
 
-9. SAMPLE DATA (use exactly for the mockup)
+	Keep the existing button geometry, clock icon, time text and selected state (2px bottom border --link). Change only:
 
-report.today.windows = [
-  {"start":"09:00","end":"10:30","rating":"BEST","label":"Best available","go":"Go, conditional",
-   "reasons":["Rising tide","Canoes 1–2 ft","Favorable ENE wind","Ahead of the afternoon regional peak"],
-   "precheck":["Several complete set cycles","Inside wave size","Post-set current","Water clarity"]},
-  {"start":"10:30","end":"12:30","rating":"CONDITIONAL","label":"Conditional","go":"Decide on the water",
-   "reasons":["Deeper water over the reef","Long-period energy at peak","Set current may increase"],
-   "precheck":["Inside set penetration","Post-set drift"]},
-  {"start":"12:30","end":"15:00","rating":"AVOID","label":"Conditional to avoid","go":"Avoid for most beginners",
-   "reasons":["Regional South Shore 6–8 ft forecast","Long-period energy near peak","More current and sets reaching the inside"],
-   "workable_for":["Strong, confident adult","Single student"],
-   "avoid_for":["Children","Nervous beginners","Weak swimmers","Low-fitness students"]}
-]
-report.tomorrow.windows = [
-  {"start":"09:00","end":"10:00","rating":"BEST","label":"Early guess","reasons":["An early guess from the forecast"]}
-]
+	rating	label text	label color	clock color
+	CONDITIONAL	Conditional	--call	--call
+	AVOID	Avoid	--adv	--adv
 
-These are the 2026-10-06 morning brief's real windows, used as sample content. Keep the SAMPLE banner.
+	•	The selected CONDITIONAL/AVOID hour keeps its rating color on the clock (do not switch it to --link). The bottom border still shows selection.
+	•	No star on these hours.
+	•	aria-label: "{time}, {Conditional|Avoid}".
+	•	Both palettes already define --call and --adv. No new colors.
 
-10. DO NOT
+5. DETAIL BLOCK UNDER THE STRIP (only for CONDITIONAL / AVOID hours)
 
-	•	MUST NOT turn windows into a score, a percentage, or a single safety number.
-	•	MUST NOT use the word "safe" anywhere in window copy.
-	•	MUST NOT derive window ratings from wind, tide or size in the app. Ratings come only from the data.
-	•	MUST NOT render instructor-only fields (2.3).
-	•	MUST NOT add a second sideways pager for windows (4.1).
-	•	MUST NOT change the hero pager, conditions row, or any section order.
+	Line 1 (bold, --fg): "{time} · {Conditional|Avoid} · {window range}"
+	Line 2 (.9rem --mute): "{reason}. Forecast wind {mph} mph from the {direction}. {tide note}"
+	•	Keep the existing tide-note rule unchanged.
+	•	For all other hours the detail block is unchanged.
 
-11. ACCEPTANCE CHECKLIST (run before replying)
+	Window range format:
+	  short(t) = (h%12 || 12) + (minutes ? ":" + two-digit minutes : "")
+	  same AM/PM:      "{short(a)}–{short(b)} {AM|PM}"       e.g. "1–3 PM"
+	  crosses noon:    "{short(a)} {A}–{short(b)} {B}"       e.g. "10:30 AM–12:30 PM"
+	  En dash, no spaces. 12:30 is PM.
 
-	1.	Today slide shows three stacked cards in order BEST, CONDITIONAL, AVOID with lime, amber and coral accents.
-	2.	Tomorrow slide shows only the BEST card with the low-confidence note.
-	3.	Swiping the window pager still changes the day and moves the hero pager with it.
-	4.	Strip with sample data: 6–8 AM Not rated (dimmed); 9–10 AM Best window with stars; 11 AM–12 PM Conditional; 1–2 PM Avoid; 3–6 PM Not rated.
-	5.	Default selection is 9 AM, centered; detail text names the window range "9–10:30 AM".
-	6.	No "Lower impact / Moderate / More active" text remains anywhere, including Glossary and How it decides.
-	7.	Empty windows array shows the "Not rated" card and an all-Not-rated strip, with no console errors.
-	8.	No horizontal page scroll at 320 px and 390 px; both palettes readable.
-	9.	Reply lists any value you could not apply and any conflict with the original handoff.
+6. COPY RULES
+
+	•	Never use the word "safe".
+	•	Reasons come from the data only. The app MUST NOT derive Conditional or Avoid from wind, tide or size.
+
+7. ACCEPTANCE CHECKLIST
+
+	1.	With the sample data: 11 AM and 12 PM show "Conditional" in amber; 1 PM and 2 PM show "Avoid" in coral.
+	2.	10 AM is still BEST with its star, still selected and centered on load.
+	3.	All other hours show their original wind-band labels.
+	4.	Tapping 11 AM shows "11 AM · Conditional · 10:30 AM–12:30 PM" and the reason line.
+	5.	Removing "windows" from the data restores the strip exactly as before.
+	6.	Nothing else on any screen changed. No console errors. No horizontal scroll at 320 px or 390 px.
 
 END_HANDOFF
