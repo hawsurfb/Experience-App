@@ -1,0 +1,239 @@
+{
+  "schema": "hss-ops/1",
+  "run": "MORNING",
+  "report_date": "2026-10-06",
+  "target_date": "2026-10-06",
+  "generated_at": "2026-10-06T06:32:00-10:00",
+  "next_update": "2026-10-06T18:30:00-10:00",
+  "beginner": {
+    "call": "CONDITIONAL",
+    "confidence": "Medium-high",
+    "best_window": { "start": "09:00", "end": "10:30" },
+    "headline": "Canoes is small, but a peaking 16-second SSW swell can push sets and current through the inside. Watch full set cycles before you start.",
+    "recommendation": "Inspect Canoes about 8:30–9:00 AM. Run a normal first-time adult lesson if Inside Canoes stays about 1–2 ft and post-set current stays manageable.",
+    "reasons": [
+      "Canoes break-specific surf is small",
+      "Broader South Shore energy is well up",
+      "Long-period SSW swell is peaking",
+      "Inside set penetration and current decide the final call"
+    ],
+    "precheck": [
+      "Watch Canoes about 8:30–9:00 AM",
+      "Observe several complete set cycles",
+      "Check how far a real set moves you, and the post-set current",
+      "Check water clarity"
+    ],
+    "decisive": [
+      "Inside set penetration",
+      "Post-set current and rightward drift",
+      "Holding the teaching lane",
+      "Student profile and number of students",
+      "Water clarity"
+    ],
+    "no_go": [
+      "Significant set-driven current",
+      "Repeated larger sets washing through the inside",
+      "Can't hold students in position",
+      "Lightning",
+      "Brown, gray, cloudy or turbid water"
+    ]
+  },
+  "general": {
+    "rating": "GOOD",
+    "headline": "Peaking south swell. Exposed Town breaks are the call for competent intermediate to advanced surfers.",
+    "size_ft": "5–8",
+    "size_note": "Regional South Shore forecast: 5–7 ft morning, 6–8 ft afternoon. Not Canoes.",
+    "surface": "Mostly clean",
+    "favored": ["Competent intermediate", "Advanced", "Exposed Town breaks"],
+    "waikiki_note": "Protected Waikīkī stays small. Longboards and high-volume boards.",
+    "trend": "Peaking today, easing Wednesday"
+  },
+  "canoes": {
+    "size_ft": "1–2",
+    "face": "Knee to thigh",
+    "quality": "Poor to fair",
+    "status": "REPORTED",
+    "note": "Break-specific estimate. Surf quality and lesson suitability are rated separately: small, protected Canoes can still be good for teaching."
+  },
+  "breaks": [
+    { "name": "Canoes", "ft": "1–2", "zone": "Waikīkī" },
+    { "name": "Queens", "ft": "1–2", "zone": "Waikīkī" },
+    { "name": "Waikīkī Beach", "ft": "1–2", "zone": "Waikīkī" },
+    { "name": "Populars", "ft": "2–3", "zone": "Waikīkī" },
+    { "name": "Threes", "ft": "2–3", "zone": "Waikīkī" },
+    { "name": "Publics", "ft": "3–4", "zone": "Town" },
+    { "name": "Diamond Head", "ft": "3–4", "zone": "Town" },
+    { "name": "Ala Moana Bowls", "ft": "3–4", "zone": "Town" }
+  ],
+  "regional": {
+    "am_ft": "5–7",
+    "pm_ft": "6–8",
+    "status": "FORECAST",
+    "scope": "Oʻahu south-facing shores. Does not apply directly to Canoes."
+  },
+  "swell": {
+    "status": "REPORTED",
+    "components": [
+      { "ft": 1.8, "s": 16, "deg": 200, "dir": "SSW", "role": "Primary" },
+      { "ft": 1.0, "s": 9, "deg": 173, "dir": "S", "role": "Secondary" },
+      { "ft": 2.0, "s": 7, "deg": 84, "dir": "E", "role": "Short-period" }
+    ],
+    "offshore": { "ft": 3.5, "s": 16, "dir": "S", "source": "Buoy / NWS", "status": "OBSERVED" },
+    "trend": "Peaking, holding",
+    "trend_prev": "Building",
+    "trend_next": "Easing Wednesday",
+    "effects": [
+      "More consistent sets",
+      "Bigger gap between sets and average waves",
+      "More set-driven current possible",
+      "Sets may reach further inside"
+    ],
+    "warning": "Long-period sets can push much harder than the 1–2 ft average suggests."
+  },
+  "wind": {
+    "dir": "ENE",
+    "deg": 67.5,
+    "kt": 9,
+    "gust_kt": 17,
+    "status": "REPORTED",
+    "effect": "Offshore at Waikīkī",
+    "forecast": "East 10–15 mph",
+    "trend": "Easing later",
+    "note": "Wind is a secondary limit today."
+  },
+  "surface": {
+    "state": "Clean to fair",
+    "drift": "Low to moderate",
+    "limiting": "Wave energy, not wind",
+    "status": "INFERRED"
+  },
+  "tide": {
+    "station": "Honolulu 1612340",
+    "status": "VERIFIED",
+    "events": [
+      { "date": "2026-10-06", "time": "06:30", "type": "L", "ft": 0.4 },
+      { "date": "2026-10-06", "time": "13:14", "type": "H", "ft": 2.1 }
+    ],
+    "phase": "Rising through the morning",
+    "positives": ["More water over the reef", "More reef clearance", "More room in the teaching zone", "Softer falls"],
+    "conflict": "The tide improves while the long-period swell stays near peak.",
+    "rule": "High tide is not automatically the best lesson time. Combine tide with swell, current, wind and the student."
+  },
+  "current": {
+    "state": "Moderate, variable",
+    "confidence": "Medium",
+    "status": "INFERRED",
+    "drivers": ["16-second SSW energy", "Peak swell", "Set-driven water movement", "Canoes reef shape"],
+    "between_sets": "Possibly calm and manageable",
+    "during_sets": "Noticeably stronger push possible",
+    "post_set": "Rightward drift may increase",
+    "field_test": "Watch how far you and the student are moved by one complete real set, and how much work it takes to get back in position.",
+    "one_student": "Higher tolerance. You can shadow and manage drift.",
+    "multi_student": "Lower tolerance: separation, more retrieval, less control. If current is strong, split the group, take one at a time, or reschedule."
+  },
+  "windows": [
+    {
+      "start": "09:00", "end": "10:30", "rating": "BEST", "label": "Best available", "go": "Go, conditional",
+      "reasons": ["Rising tide", "Canoes 1–2 ft", "Favorable ENE wind", "Ahead of the afternoon regional peak"],
+      "precheck": ["Several complete set cycles", "Inside wave size", "Post-set current", "Water clarity"],
+      "effort": { "student": "Low–moderate", "coach": "Moderate" },
+      "notes": ["Paddling low", "Repositioning moderate at times", "Wave impact low, occasional moderate sets"]
+    },
+    {
+      "start": "10:30", "end": "12:30", "rating": "CONDITIONAL", "label": "Conditional", "go": "Decide on the water",
+      "reasons": ["Deeper water over the reef", "Long-period energy at peak", "Set current may increase"],
+      "precheck": ["Inside set penetration", "Post-set drift", "Holding the teaching lane", "Student profile"]
+    },
+    {
+      "start": "12:30", "end": "15:00", "rating": "AVOID", "label": "Conditional to avoid", "go": "Avoid for most beginners",
+      "reasons": ["Regional South Shore 6–8 ft forecast", "Long-period energy near peak", "More current and sets reaching the inside"],
+      "workable_for": ["Strong, confident adult", "Single student"],
+      "avoid_for": ["Children", "Nervous beginners", "Weak swimmers", "Low-fitness students", "Several students if current is significant"]
+    }
+  ],
+  "avoid_triggers": [
+    "Repeated powerful sets reaching Inside Canoes",
+    "Significant rightward current",
+    "Can't hold the teaching lane",
+    "Constant whitewater",
+    "Too much student retrieval",
+    "Too much instructor repositioning",
+    "Brown or cloudy water",
+    "Lightning"
+  ],
+  "effort": [
+    { "when": "Morning", "student": "Low–moderate", "coach": "Moderate" },
+    { "when": "Strong set cycles", "student": "Moderate", "coach": "Moderate–high" },
+    { "when": "Several students, with current", "student": "", "coach": "High possible" }
+  ],
+  "effort_rule": "Your workload can't be read from wave height alone. Goal: more surfing, less paddling.",
+  "boards": {
+    "canoes": [
+      { "board": "Longboard", "fit": "Strongly favored" },
+      { "board": "Large soft top", "fit": "Favored" },
+      { "board": "High-volume midlength", "fit": "Good" },
+      { "board": "Performance shortboard", "fit": "Underpowered" }
+    ],
+    "town": "Competent intermediate to advanced. 3–4+ ft at the breaks, 5–8 ft regional exposed-shore forecast."
+  },
+  "weather": {
+    "sky": "Mostly sunny",
+    "showers": "Isolated showers",
+    "rain_pct": 20,
+    "wind": "East 10–15 mph",
+    "upcoming": {
+      "when": "Wednesday night through Friday",
+      "items": ["More tropical moisture", "Locally heavy rain possible", "Isolated thunderstorms possible"],
+      "note": "No flood watch yet. Forecast confidence isn't high enough for one."
+    }
+  },
+  "alerts": [],
+  "watch": [
+    { "head": "South Shore surf near advisory level", "body": "Surf is expected to approach High Surf Advisory criteria. No advisory is active." },
+    { "head": "Wet stretch Wednesday night to Friday", "body": "Tropical moisture, locally heavy rain and isolated thunderstorms possible. Runoff can follow heavy rain." }
+  ],
+  "hazards": [
+    { "name": "High surf advisory, South Shore", "state": "NOT_ACTIVE", "note": "Near advisory level is not an active advisory." },
+    { "name": "High surf warning, South Shore", "state": "NOT_ACTIVE" },
+    { "name": "Small craft advisory", "state": "NONE_VERIFIED" },
+    { "name": "Flood watch or warning", "state": "NONE_VERIFIED" },
+    { "name": "Flash flood warning", "state": "NONE_VERIFIED" },
+    { "name": "Thunderstorm or lightning warning", "state": "NONE_VERIFIED" }
+  ],
+  "tropical": {
+    "active": "None",
+    "note": "No active Central Pacific cyclones. Nolo has left the Central Pacific. Today's south swell is Southern Hemisphere groundswell, not Nolo."
+  },
+  "water": {
+    "status": "NOT_VERIFIED",
+    "inventory_verified": false,
+    "headline": "No Waikīkī advisory verified",
+    "statement": "No Waikīkī or Canoes-specific water-quality advisory was verified during this refresh.",
+    "why": "The live DOH Clean Water Branch advisory list couldn't be read this run, so statewide and Oʻahu notices are unknown.",
+    "checked": { "brown_water": false, "bacteria": false, "sewage": false, "beach": false },
+    "runoff": "Brown, gray, cloudy or turbid water, or visible runoff: don't go in, advisory or not."
+  },
+  "changes": {
+    "previous": { "date": "2026-10-05", "swell": "Building", "canoes_ft": "1–2", "period_s": 18 },
+    "items": [
+      "The swell has arrived",
+      "Sets are more consistent",
+      "Regional energy is higher",
+      "Canoes stays protected and small",
+      "Stronger set-driven current possible"
+    ],
+    "next": "Swell easing Wednesday, Oct 7"
+  },
+  "sources": [
+    { "name": "NWS Honolulu forecasts and hazards", "status": "Checked" },
+    { "name": "NOAA tides, Honolulu", "status": "Checked" },
+    { "name": "Offshore buoy / NWS swell context", "status": "Checked" },
+    { "name": "Central Pacific Hurricane Center", "status": "Checked" },
+    { "name": "Hawaiʻi DOH Clean Water Branch", "status": "Not reachable" }
+  ],
+  "gaps": [
+    "Live DOH advisory list couldn't be read",
+    "Current is inferred, not measured",
+    "Canoes size is an estimate, not an on-site measurement"
+  ]
+}

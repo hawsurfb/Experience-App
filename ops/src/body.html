@@ -1,0 +1,297 @@
+<!-- =============== OPENING =============== -->
+<div class="splash" id="splash" role="dialog" aria-label="Hawaii Soul Surfer Ops">
+  <svg class="sp-waves" viewBox="0 0 390 340" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M-10 200 C 60 150, 120 250, 200 200 S 330 150, 400 190"/><path class="w2" d="M-10 260 C 70 220, 140 300, 210 255 S 340 215, 400 250"/></svg>
+  <div class="sp-in">
+    <div class="sp-place">Hawaii Soul Surfer · Canoes</div>
+    <div class="sp-title">Ops Report</div>
+    <div class="sp-live">LIVE<span class="sp-dot"></span></div>
+    <button class="sp-btn" id="spOpen">Open the report</button>
+  </div>
+  <div class="sp-foot">Hawaii Soul Surfer</div>
+</div>
+<!-- =============== REPORT =============== -->
+<main class="wrap view" id="v-home">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Hawaii Soul Surfer · Canoes</div>
+      <h1>Ops Report<span class="live" id="liveTag">LIVE</span></h1>
+    </div>
+    <a class="iconbtn" href="#/settings" aria-label="Settings">__GEAR__</a>
+  </div>
+  <div class="tabbar" data-tabs></div>
+  <div class="databar" data-databar></div>
+
+  <div id="alerts" class="stack"></div>
+
+  <!-- main card: swipe for the general-surfer outlook -->
+  <div class="swipewrap"><span class="sa" id="saHero"></span><div class="pager" id="heroPager" aria-label="Beginner call and general-surfer outlook, swipe sideways">
+    <div class="hero" id="hero0"></div>
+    <div class="hero" id="hero1"></div>
+  </div></div>
+
+  <section><h2 class="sec-title">Conditions</h2><div class="bleed"><div class="conds" id="tiles" aria-label="Conditions, slide sideways"></div></div><div class="condhint" id="condHint"></div></section>
+
+  <!-- lesson windows: swipe through best, conditional, avoid -->
+  <div class="swipewrap"><span class="sa" id="saWin"></span><div class="pager" id="winPager" aria-label="Lesson windows, swipe sideways"></div></div>
+
+  <section class="timing" id="timingSec">
+    <h2 class="sec-title">Timing through the day</h2>
+    <div class="fine" style="margin-bottom:.4rem" id="timingSub">6 AM to 6 PM. Slide sideways, tap an hour to see why.</div>
+    <div class="bleed"><div class="hours" id="hours" role="group" aria-label="Hours"></div></div>
+    <div class="hdetail" id="hdetail"></div>
+  </section>
+
+
+  <section class="vis">
+    <div class="sep">
+      <h2 class="sec-title" id="tideTitle">Today's tide</h2>
+      <div id="tideChart"></div>
+      <div class="fine" style="margin-top:.4rem" id="tideNote"></div>
+    </div>
+
+    <div>
+      <h2 class="sec-title">Wave energy by period</h2>
+      <svg id="energy" viewBox="0 0 350 270" width="100%" role="img" aria-label="Wave energy by period"></svg>
+      <div class="energy-cap" id="energyCap"></div>
+      <div class="fine" id="energySub"></div>
+      <div class="stat2"><div><div class="eyebrow">Dominant period</div><b id="domPer">–</b><span>The tallest peak</span></div><div><div class="eyebrow">Offshore swell</div><b id="swH">–</b><span>Not surf size, not Canoes</span></div></div>
+      <div class="fine" style="margin-top:.5rem">A taller peak means more wave energy at that period. Drawn from the brief's swell components, scaled by height² × period. Long periods carry more push than the wave height suggests.</div>
+    </div>
+
+    <div>
+      <h2 class="sec-title">Swell and wind</h2>
+      <div class="two">
+        <div><h3 class="sub-title">Swell direction</h3><svg id="swellC" viewBox="0 0 160 160" width="100%" role="img" aria-label="Swell direction"></svg><div class="cap" id="swellCap"></div></div>
+        <div><h3 class="sub-title">Wind direction</h3><svg id="windC" viewBox="0 0 160 160" width="100%" role="img" aria-label="Wind direction"></svg><div class="cap" id="windCap"></div></div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="sec-title">Swell map</h2>
+      <div class="mappager" id="mapPager" aria-label="Swell map. Swipe sideways to switch between Kūhiō Beach and Queen's Beach.">
+        <div class="mapslide"><div class="stage"><svg viewBox="0 0 1000 1000"></svg></div><div class="maptag">Kūhiō Beach<small>Canoes</small></div><span class="sa"></span></div>
+        <div class="mapslide"><div class="stage"><svg viewBox="0 0 1000 1000"></svg></div><div class="maptag">Queen's Beach</div><span class="sa l"></span></div>
+      </div>
+      <div class="legend" id="mapLegend"></div>
+      <div class="fine" style="margin-top:.5rem">The blue arrow is the primary offshore swell component, not surf size at the break. Both breaks share the same swell and wind. Ring positions are approximate.</div>
+    </div>
+
+    <div>
+      <h2 class="sec-title">Before you start</h2>
+      <div class="checkgrid">
+        <div><div class="eyebrow">On the beach</div><ul class="blist" id="precheck"></ul></div>
+        <div class="fieldtest" id="fieldTest"></div>
+        <div><div class="eyebrow" style="color:var(--adv)">No-go, whatever the report says</div><ul class="blist nogo" id="nogo"></ul></div>
+        <div><div class="eyebrow">Decides the call</div><ul class="blist" id="decisive"></ul></div>
+      </div>
+      </div>
+
+    <div>
+      <h2 class="sec-title">Effort and boards</h2>
+      <div class="etable" id="effort"></div>
+      <div class="fine" id="effortRule" style="margin-top:.5rem"></div>
+      <h3 class="sub-title" style="margin-top:1.25rem">Boards at Canoes</h3>
+      <div id="boards"></div>
+      <div class="fine" id="townBoards" style="margin-top:.5rem"></div>
+    </div>
+
+    <div>
+      <h2 class="sec-title">What changed</h2>
+      <div class="cmp" id="cmp"></div>
+      <ul class="blist" id="changes" style="margin-top:.75rem"></ul>
+      <div class="fine" id="changeNext"></div>
+    </div>
+  </section>
+
+  __SOS__
+
+  <nav class="links" aria-label="More">
+    <a href="#/references">Sources</a><a href="#/glossary">Glossary</a><a href="#/decisions">How it decides</a><a href="#/advisories">Advisories</a><a href="#/settings">Settings</a>
+  </nav>
+  <div class="fine">Conditions change quickly. This is an instructor's decision aid, built from public forecasts and observations. It doesn't replace looking at the water, lifeguard guidance, official warnings, or your judgment on the beach.</div>
+  <div class="fine" style="font-size:.8rem">Hawaii Soul Surfer Ops · data format hss-ops/1</div>
+</main>
+
+<!-- =============== BREAKS =============== -->
+<main class="wrap view hide" id="v-breaks">
+  <div class="top"><div><div class="eyebrow">Hawaii Soul Surfer · South Shore</div><h1>Breaks</h1></div>
+    <a class="iconbtn" href="#/settings" aria-label="Settings">__GEAR__</a></div>
+  <div class="tabbar" data-tabs></div>
+  <div class="databar" data-databar></div>
+  <div class="fdayhead"><div class="dayname" id="zName"></div><span class="fine">Swipe for the next zone</span></div>
+  <div class="swipewrap"><span class="sa" id="saZ"></span><div class="pager fpager" id="zPager" aria-label="Surf by zone, swipe sideways"></div></div>
+  <section>
+    <h2 class="sec-title">By break</h2>
+    <div class="fine" style="margin-bottom:.4rem">Break-specific estimates in feet, Hawaiian scale. Canoes is far more protected than the exposed Town breaks.</div>
+    <div class="btable" id="btable"></div>
+  </section>
+  <section>
+    <h2 class="sec-title">Swell components</h2>
+    <div class="fine" style="margin-bottom:.4rem">Offshore height, period and the direction each swell comes from. These are not breaking-wave heights.</div>
+    <div class="ftable" id="stable"></div>
+    <div class="fine" id="offshoreNote" style="margin-top:.6rem"></div>
+  </section>
+  <section>
+    <h2 class="sec-title">Swell trend</h2>
+    <div class="trend" id="trend"></div>
+    <ul class="blist" id="swEffects" style="margin-top:.75rem"></ul>
+    <div class="warnline" id="lpWarn"></div>
+  </section>
+  <section>
+    <h2 class="sec-title">General surfer outlook</h2>
+    <div id="genOut"></div>
+  </section>
+  <div class="fine">Regional forecasts cover Oʻahu's south-facing shores, not Canoes. Conditions change quickly.</div>
+</main>
+
+<!-- =============== WEATHER =============== -->
+<main class="wrap wx view hide" id="v-weather">
+  <div class="top"><div><div class="lbl">Hawaii Soul Surfer · Oʻahu</div><h1 style="margin-top:.4rem">Oʻahu <span class="serif">weather</span></h1></div>
+    <a class="iconbtn" href="#/settings" aria-label="Settings">__GEAR__</a></div>
+  <div class="tabbar" data-tabs></div>
+  <div class="databar" data-databar></div>
+  <div class="wcards" id="wcards"></div>
+  <div class="sect"><div class="lbl gold">Hazards checked this run</div><div id="hazList"></div>
+    <div class="fine">"None verified" means none was found in the sources checked. It is not proof that conditions are fine.</div></div>
+  <div class="sect"><div class="lbl gold">Tropical</div><p id="tropical"></p></div>
+  <div class="sect"><div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem"><span class="lbl gold">Water quality</span><span class="badge" id="wqBadge"></span></div>
+    <p id="wqHead" style="font-weight:600"></p><p id="wqStatement"></p><div class="fine" id="wqWhy"></div>
+    <div id="wqNotices"></div>
+    <div class="runoff" id="wqRunoff"></div></div>
+  <div class="sect"><div class="lbl gold">Current along Canoes</div>
+    <p id="curState" style="font-weight:600"></p>
+    <div id="curRows"></div>
+    <div class="fine"><b style="color:var(--fg)">Inferred, not measured.</b> No current gauge covers Canoes, so this is reasoned from swell period, size and the reef. Your field test on the day decides.</div></div>
+  <div class="sect"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem"><span class="lbl gold">Tide</span><span class="lbl" id="wxTideStation"></span></div>
+    <div id="wxTide"></div><ul class="blist" id="tidePos"></ul><div class="fine" id="tideRule"></div></div>
+  <div class="sect"><div class="lbl gold">Weather references and who to call</div>
+    <div>
+      <div class="line2"><span class="who">NWS Honolulu forecast office<small>Local weather · office line</small></span><span class="nums"><a href="tel:8089735286">(808) 973-5286</a><button class="copybtn" data-copy="(808) 973-5286" aria-label="Copy (808) 973-5286"></button></span></div>
+      <div class="line2"><span class="who">Honolulu forecast website<small>Forecasts, watches and warnings</small></span><span class="nums"><a href="https://www.weather.gov/hfo/" target="_blank" rel="noopener">weather.gov/hfo</a></span></div>
+      <div class="line2"><span class="who">Central Pacific Hurricane Center<small>Tropical systems</small></span><span class="nums"><a href="https://www.nhc.noaa.gov/cphc/" target="_blank" rel="noopener">noaa.gov/cphc</a></span></div>
+      <div class="line2"><span class="who">DOH Clean Water Branch<small>Brown water and beach advisories</small></span><span class="nums"><a href="https://health.hawaii.gov/cwb/" target="_blank" rel="noopener">health.hawaii.gov/cwb</a></span></div>
+    </div></div>
+  <section class="sos-zone">
+    <h2 class="sec-title">Emergencies and weather reports</h2>
+    <div class="call911"><a href="tel:911"><b>911</b><span>Lightning strike, fire, rescue, anyone in danger</span></a><button class="copybtn" data-copy="911" aria-label="Copy 911"></button></div>
+    <div class="line2"><span class="who">Fire department office<small>Fire Operations · not for emergencies</small></span><span class="nums"><a href="tel:8087237113">(808) 723-7113</a><button class="copybtn" data-copy="(808) 723-7113" aria-label="Copy (808) 723-7113"></button></span></div>
+    <div class="line2"><span class="who">Report weather you are seeing<small>Lightning, flooding, waterspout. Tell the NWS office</small></span><span class="nums"><a href="tel:8089735286">(808) 973-5286</a><button class="copybtn" data-copy="(808) 973-5286" aria-label="Copy (808) 973-5286"></button></span></div>
+    <div class="fine" style="margin-top:.6rem">Lightning near you: get out of the water and off the beach first, then call.</div>
+  </section>
+</main>
+
+<!-- SETTINGS -->
+<main class="wrap page view hide" id="v-settings">
+  <a class="back" href="#/" data-back>← Back</a>
+  <h1>Settings</h1>
+  <section>
+    <h2 class="sub-title">Text size</h2>
+    <div class="seg3" id="sizeSeg" role="group" aria-label="Text size">
+      <button data-v="s" aria-label="Smaller text" style="font-size:1rem">A</button>
+      <button data-v="m" aria-label="Standard text" style="font-size:1.4rem">A</button>
+      <button data-v="l" aria-label="Larger text" style="font-size:1.9rem">A</button>
+    </div>
+    <p class="fine">Smaller, standard or larger. Applies to everything in the app.</p>
+  </section>
+  <section>
+    <h2 class="sub-title">Color palette</h2>
+    <div class="pal" id="palSeg" role="group" aria-label="Color palette">
+      <button data-v="violet" aria-pressed="false"><span>Night Reef</span><span class="sw"><i style="background:#0D0B10"></i><i style="background:#2A1937"></i><i style="background:#C39BFF"></i><i style="background:#D8FF6A"></i><i style="background:#FFC857"></i><i style="background:#FF6B5E"></i></span></button>
+      <button data-v="surf" aria-pressed="false"><span>Surf</span><span class="sw"><i style="background:#1E1E2E"></i><i style="background:#11111B"></i><i style="background:#87B0F9"></i><i style="background:#A6E3A1"></i><i style="background:#F9E2AF"></i><i style="background:#F38BA8"></i></span></button>
+    </div>
+  </section>
+  <section>
+    <h2 class="sub-title">Report data</h2>
+    <div id="dataInfo"></div>
+  </section>
+  <section class="menu">
+    <h2 class="sub-title">Learn more</h2>
+    <a href="#/advisories">Advisories <span>›</span></a>
+    <a href="#/decisions">How the report decides <span>›</span></a>
+    <a href="#/glossary">Glossary <span>›</span></a>
+    <a href="#/references">Sources <span>›</span></a>
+  </section>
+</main>
+
+<!-- ADVISORIES -->
+<main class="wrap page view hide" id="v-advisories">
+  <a class="back" href="#/" data-back>← Back</a>
+  <h1>Advisories</h1>
+  <div id="alerts2" class="stack"></div>
+  <section><h2 class="sub-title">Heads-up</h2><div id="watch2"></div></section>
+  <section><h2 class="sub-title">Everything checked</h2><div id="haz2"></div></section>
+  <section>
+    <h2 class="sub-title">How advisories are shown</h2>
+    <p class="fine">Only official, active advisories that were verified for the area show in a red box, with who issued them. Heads-up items are not advisories. If a source couldn't be reached, the report says so instead of showing nothing.</p>
+    <p class="fine">"None verified" means none was found in the sources checked. It does not mean conditions are workable or the water is clean.</p>
+  </section>
+</main>
+
+<!-- GLOSSARY -->
+<main class="wrap page view hide" id="v-glossary">
+  <a class="back" href="#/" data-back>← Back</a>
+  <h1>Glossary</h1>
+  <dl>
+    <dt>Hawaiian scale</dt><dd>The local way of calling wave size. It usually reads smaller than the face; the face is often about twice the number.</dd>
+    <dt>Canoes vs regional</dt><dd>Canoes sizes are break-specific estimates. The regional South Shore forecast covers exposed south-facing breaks and is much bigger. One never stands in for the other.</dd>
+    <dt>Offshore swell</dt><dd>Swell height measured or forecast out at sea. It is not the height of breaking waves at any break.</dd>
+    <dt>Swell period</dt><dd>Seconds between waves. Long periods (14 s and up) carry more energy, so sets push harder and can drive current even when waves look small.</dd>
+    <dt>Set penetration</dt><dd>How far bigger set waves reach into the inside teaching zone.</dd>
+    <dt>Teaching lane</dt><dd>The patch of water you work in with a student. Losing it to drift or whitewater is a no-go signal.</dd>
+    <dt>Rightward drift</dt><dd>The along-shore pull that tends to follow sets at Canoes.</dd>
+    <dt>Verified</dt><dd>Confirmed from an official source this run.</dd>
+    <dt>Observed</dt><dd>Measured by an instrument, such as a buoy.</dd>
+    <dt>Forecast</dt><dd>A prediction from a weather or ocean model.</dd>
+    <dt>From brief</dt><dd>Stated in the brief without a specific source label.</dd>
+    <dt>Inferred</dt><dd>A reasoned estimate, not a measurement. Current is always inferred unless measured.</dd>
+    <dt>Not verified</dt><dd>The source couldn't confirm it either way.</dd>
+    <dt>Unavailable</dt><dd>The value couldn't be obtained. It is left blank, never guessed.</dd>
+    <dt>GO, CONDITIONAL, NO-GO</dt><dd>The beginner lesson call. Conditional means workable only if what you see on the beach checks out.</dd>
+    <dt>Best, Conditional, Avoid windows</dt><dd>Times of day ranked for beginner lessons, each with its reasons.</dd>
+  </dl>
+</main>
+
+<!-- HOW -->
+<main class="wrap page view hide" id="v-decisions">
+  <a class="back" href="#/" data-back>← Back</a>
+  <h1>How the report decides</h1>
+  <section>
+    <h2 class="sub-title">The beginner call</h2>
+    <div class="row"><b>GO</b><p>Conditions point to a normal beginner lesson in the best window.</p></div>
+    <div class="row"><b>CONDITIONAL</b><p>Workable only if the on-beach checks pass. The report lists them.</p></div>
+    <div class="row"><b>NO-GO</b><p>A hazard or conditions point to not running beginner lessons.</p></div>
+  </section>
+  <section>
+    <h2 class="sub-title">Two separate ratings</h2>
+    <p class="fine">General surf quality and beginner lesson suitability are rated separately. Small, poor-quality Canoes can be a good teaching day, and a great swell for Town can be a hard day for beginners.</p>
+  </section>
+  <section>
+    <h2 class="sub-title">What it never does</h2>
+    <p class="fine">It never maps the regional forecast or offshore swell onto Canoes. It never calls long-period 1–2 ft surf easy by default. It never says "safe", never says the water is clean, and never claims there are no Oʻahu or statewide water advisories unless the full DOH list was read. It never invents a value when a source is down.</p>
+  </section>
+  <section>
+    <h2 class="sub-title">When it updates</h2>
+    <p class="fine">A full refresh runs every day at about 6:30 AM and 6:30 PM HST. The morning run rates today. The evening run rates tomorrow, with lower confidence. After 14 hours without an update the report is marked stale.</p>
+  </section>
+  <section>
+    <h2 class="sub-title">Who decides</h2>
+    <p class="fine">You do. Your on-site judgment overrides the report every time.</p>
+  </section>
+</main>
+
+<!-- SOURCES -->
+<main class="wrap page view hide" id="v-references">
+  <a class="back" href="#/" data-back>← Back</a>
+  <h1>Sources</h1>
+  <section><h2 class="sub-title">Checked this run</h2><div id="srcList"></div></section>
+  <section><h2 class="sub-title">Gaps</h2><ul class="blist" id="gapList"></ul></section>
+  <section><h2 class="sub-title">Where the information comes from</h2>
+    <div class="row"><b><a href="https://www.weather.gov/hfo/" target="_blank" rel="noopener">NWS Honolulu</a></b><p>Weather, wind, surf forecast and hazard statements for Oʻahu.</p></div>
+    <div class="row"><b><a href="https://tidesandcurrents.noaa.gov/stationhome.html?id=1612340" target="_blank" rel="noopener">NOAA Tides &amp; Currents, Honolulu (1612340)</a></b><p>Tide predictions.</p></div>
+    <div class="row"><b><a href="https://www.ndbc.noaa.gov/" target="_blank" rel="noopener">NOAA buoys (NDBC / CDIP)</a></b><p>Offshore swell height, period and direction.</p></div>
+    <div class="row"><b><a href="https://health.hawaii.gov/cwb/" target="_blank" rel="noopener">Hawaiʻi DOH Clean Water Branch</a></b><p>Brown water, bacteria, sewage and beach advisories.</p></div>
+    <div class="row"><b><a href="https://www.nhc.noaa.gov/cphc/" target="_blank" rel="noopener">Central Pacific Hurricane Center</a></b><p>Tropical systems.</p></div>
+    <div class="row"><b><a href="https://www.honolulupd.org/contact-us/phone-numbers/" target="_blank" rel="noopener">Honolulu Police Department</a></b><p>Source for the police phone numbers.</p></div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status"></div>
