@@ -1,0 +1,549 @@
+{
+  "schema": "hss-ops/1",
+  "run": "EVENING",
+  "report_date": "2026-10-14",
+  "target_date": "2026-10-15",
+  "generated_at": "2026-10-14T18:45:00-10:00",
+  "next_update": "2026-10-15T06:26:00-10:00",
+  "beginner": {
+    "call": "CONDITIONAL",
+    "confidence": "Low to moderate, lower than a same-morning report. This is an evening forecast for Thursday. NWS: a new long-period south swell builds Thursday (coastal waters: south 3 ft at 18 s) and may keep south-facing surf above seasonal average through Friday; Oʻahu south-facing 3–5 ft Thursday AM, 4–6 ft PM (surf zone forecast 3:35 PM Wed, exposed shores, not Canoes). Trades step up to ENE 15–20 kt. Canoes this evening: 2–3 ft thigh to waist (Surfline, no timestamp; 0.7 ft tide reading and 'clear night' fit this evening). No buoy reading reached, no afternoon NWS discussion reached, and the DOH advisory list could not be opened (fifth run in a row). Your morning on-site check decides.",
+    "best_window": {
+      "start": "06:45",
+      "end": "09:30"
+    },
+    "headline": "Tomorrow (Thu Oct 15): conditional for beginners; lower confidence than a same-morning report, and your morning on-site check decides. New 17–18 s south swell building (fewer, stronger sets) and breezier ENE trades, 15–20 kt. Best 6:45–9:30 AM around the 7:13 AM high (1.9 ft), before the wind peaks. Afternoon not recommended for beginners.",
+    "recommendation": "Plan for 6:45–9:30 AM: the 7:13 AM high (1.9 ft) gives the most water over the reef, and trades are lightest early (model ENE 16 mph, gusts 22, at 6–7 AM, building to 18 mph, gusts 25, by 9–10 AM; NWS ENE 15–20 kt all day). Expect a different swell from today: the 12–13 s SSW is fading and a 17–18 s south swell is building, so lulls get longer and sets come in fewer but with more push, reaching further inside than the average size suggests. Watch several full set cycles (10+ minutes) before starting. ENE trades are cross-offshore at Waikīkī, so expect seaward drift from the start, worse on gusts. The DOH list was not read, so check water color at Canoes and toward the Kūhiō drains and Ala Wai side; brown, gray or cloudy water ends it. One student or a small group of strong adults; several students or children only if drift is low and sets stay small inside. Your on-site read overrides this report.",
+    "reasons": [
+      "NWS surf zone forecast, Oʻahu (3:35 PM HST Wed): south-facing 3–5 ft Wednesday night and Thursday AM, 4–6 ft Thursday PM; new long-period south swell builds Thursday, may keep south shore surf above seasonal average through Friday. Exposed-shore numbers, not Canoes",
+      "NWS coastal waters, Oʻahu leeward waters (3:43 AM HST Wed, latest reached): Thursday ENE 15–20 kt, seas 5–6 ft; wave detail ENE 5 ft at 6 s, NNW 3 ft at 11 s, south 3 ft at 18 s; isolated showers in the afternoon",
+      "NWS forecast discussion (3:54 AM HST Wed, latest reached): reinforcing long-period south swell gives near-seasonal south-shore surf tonight into early weekend; trades breezy by Thursday, locally strong by the weekend; watches/warnings/advisories none",
+      "Surfline Canoes this evening (no timestamp): 2–3 ft thigh to waist, Poor to Fair; S 2.4 ft at 12 s (191°), S 0.8 ft at 21 s (191°), W 0.7 ft at 10 s; wind 10 kt ENE gusting 16 (model)",
+      "Surfnerd Queens/Canoes model (14 Oct 06z run): Thursday S 1.6 ft at 17–18 s through the morning, 1.8–2.0 ft at ~17 s afternoon; ENE 16 mph (gusts 22) 6 AM, 18 mph (gusts 25) 9–10 AM, 19–20 mph (gusts 27–28) afternoon",
+      "Hawaii News Now (3:21 AM Wed): south swell reinforcement late Thursday, below advisory level"
+    ],
+    "precheck": [
+      "Water color at Canoes and toward the Kūhiō storm drains and Ala Wai side (DOH list not read)",
+      "Several full set cycles (10+ minutes): long-period sets come with long lulls, so a short look misleads",
+      "Wind strength and seaward drift in the teaching lane",
+      "Thunder or lightning"
+    ],
+    "decisive": [
+      "Set size and inside penetration on the new long-period swell",
+      "Wind drift (cross-offshore ENE trades, 15–20 kt)",
+      "Drift and current",
+      "Water clarity",
+      "Student profile and number of students"
+    ],
+    "no_go": [
+      "Brown, gray, cloudy or turbid water",
+      "Any DOH brown-water or bacteria advisory covering Waikīkī",
+      "Lightning or thunder",
+      "Repeated long-period sets reaching Inside Canoes with force",
+      "Gusty trades pushing students seaward faster than you can recover them",
+      "Significant set-driven current or drift",
+      "Can't hold students in position"
+    ]
+  },
+  "general": {
+    "rating": "FAIR",
+    "headline": "New long-period south swell (17–18 s) builds Thursday as the 12–13 s SSW fades; NWS has south-facing shores 3–5 ft AM, 4–6 ft PM, possibly above seasonal average through Friday. Trades breezier, ENE 15–20 kt: cross-offshore at Waikīkī and Town, so faces stay groomed but it gets gusty.",
+    "size_ft": "3–5 AM, 4–6 PM (NWS south-facing, Thursday; issued 3:35 PM Wed)",
+    "size_note": "NWS numbers are for exposed south-facing shores. Canoes is far more protected: Surfline has 2–3 ft thigh to waist this evening; Surfnerd models Canoes at 1.6–2.0 ft but at 17–18 s, which means bigger, less frequent sets than the average suggests.",
+    "surface": "Groomed by cross-offshore ENE trades, but gusty; more chop and wind drift through the day",
+    "favored": [
+      "Longboards / high-volume boards at protected Waikīkī breaks, early",
+      "Intermediate to experienced surfers on exposed Town reefs as the long-period swell fills in"
+    ],
+    "waikiki_note": "Surfline Canoes this evening (no timestamp): 2–3 ft, Poor to Fair, S 12 s primary with a 21 s forerunner now 0.8 ft (0.4 ft this morning). Long-period sets mean long lulls, then sets well above the average.",
+    "trend": "South swell building Thursday, holding above seasonal average Friday (NWS), slowly declining Saturday into early next week; trades breezy Thursday–Friday, locally strong by the weekend"
+  },
+  "canoes": {
+    "size_ft": "2–3",
+    "face": "Thigh to waist",
+    "quality": "Poor to Fair",
+    "status": "REPORTED",
+    "note": "Surfline Canoes this evening; the page shows no report time, but its 0.7 ft tide reading and 'clear night' fit this evening (after the 5:29 PM high, 0.8 ft). Not an in-person observation, and it describes tonight, not Thursday. Thursday model (Surfnerd): 1.6–2.0 ft at 17–18 s. Surf quality and lesson suitability are rated separately."
+  },
+  "breaks": [
+    {
+      "name": "Canoes (Surfline)",
+      "ft": "2–3 ft thigh–waist this evening (no timestamp shown)",
+      "zone": "Waikīkī"
+    },
+    {
+      "name": "Canoes (model, Thu)",
+      "ft": "1.6–2.0 ft at 17–18 s (Surfnerd, 14 Oct 06z run)",
+      "zone": "Waikīkī"
+    },
+    {
+      "name": "Oʻahu south-facing (NWS, Thu)",
+      "ft": "3–5 AM, 4–6 PM (NWS, issued 3:35 PM Wed)",
+      "zone": "Town"
+    },
+    {
+      "name": "Town / Ala Moana–Kewalos",
+      "ft": "UNAVAILABLE (no size reached)",
+      "zone": "Town"
+    }
+  ],
+  "regional": {
+    "am_ft": "3–5",
+    "pm_ft": "4–6",
+    "status": "FORECAST",
+    "scope": "NWS Oʻahu surf zone forecast, south-facing shores, for Thursday Oct 15, issued 3:35 PM HST Wed Oct 14. These numbers are for exposed south-facing shores and never apply directly to Canoes."
+  },
+  "swell": {
+    "status": "FORECAST",
+    "components": [
+      {
+        "ft": 3,
+        "s": 18,
+        "deg": 180,
+        "dir": "S",
+        "role": "New long-period south swell building Thursday; main set energy at Waikīkī by afternoon (NWS coastal waters)"
+      },
+      {
+        "ft": 2.4,
+        "s": 12,
+        "deg": 191,
+        "dir": "S",
+        "role": "Older south swell, fading (Surfline this evening)"
+      },
+      {
+        "ft": 3,
+        "s": 11,
+        "deg": 338,
+        "dir": "NNW",
+        "role": "NNW swell; mostly blocked at Waikīkī (NWS coastal waters)"
+      },
+      {
+        "ft": 5,
+        "s": 6,
+        "deg": 68,
+        "dir": "ENE",
+        "role": "Trade wind swell; little effect at Canoes (NWS coastal waters)"
+      }
+    ],
+    "offshore": {
+      "ft": null,
+      "s": null,
+      "dir": "UNAVAILABLE",
+      "source": "No south-shore buoy reading reached this run: NDBC 51212, 51213, 51211, 51202 and CDIP/PacIOOS pages were not accessible.",
+      "status": "UNAVAILABLE"
+    },
+    "trend": "Building Thursday, above seasonal average possible through Friday",
+    "trend_prev": "This morning's report: SSW 2.6 ft at 13 s fading, 20 s forerunner 0.4 ft (Surfline)",
+    "trend_next": "Above seasonal average through Friday, then slowly declining Saturday into early next week (NWS surf zone forecast 3:35 PM Wed)",
+    "effects": [
+      "Longer lulls, then sets well above the average wave",
+      "17–18 s sets push further inside and with more force than their size suggests",
+      "Set-driven current more likely on set cycles, especially afternoon as the swell fills",
+      "ENE 15–20 kt trades add seaward drift from the start of the day"
+    ],
+    "warning": "Don't treat Thursday as low-energy because Canoes may average 2–3 ft or less. The new swell is 17–18 s: a calm-looking lull can be followed by sets that reach Inside Canoes with force."
+  },
+  "wind": {
+    "dir": "ENE",
+    "deg": 68,
+    "kt": 17,
+    "gust_kt": null,
+    "status": "FORECAST",
+    "effect": "ENE trades are cross-offshore at Waikīkī: cleaner faces, but seaward drift for students and boards, stronger in gusts",
+    "forecast": "NWS coastal waters (3:43 AM HST Wed, latest reached), Oʻahu leeward waters: tonight and Thursday ENE 15–20 kt; Thursday night and Friday ENE to 20 kt. NWS surf zone forecast (3:35 PM Wed): Oʻahu E 15–20 mph Thursday, NE around 15 mph tonight. Surfnerd Canoes model: ENE 16 mph (gusts 22) 6–7 AM, 17–18 mph (gusts 24–25) 8–11 AM, 19–20 mph (gusts 26–28) noon–6 PM. Surfline tonight: 10 kt ENE gusting 16 (model).",
+    "trend": "Breezier than today all day Thursday; strongest early to late afternoon; locally strong by the weekend",
+    "note": "17 kt is the middle of the NWS 15–20 kt leeward-waters range, not a Waikīkī measurement. NWS gives no gust value (left null); the Surfnerd model has gusts 22–28 mph (about 19–24 kt)."
+  },
+  "surface": {
+    "state": "Groomed but gusty early; more wind texture and chop from late morning",
+    "drift": "Moderate seaward from early morning; moderate to strong in afternoon gusts",
+    "limiting": "Wind drift (ENE 15–20 kt); long-period set size and set-driven current; water color (DOH not verified)",
+    "status": "INFERRED"
+  },
+  "tide": {
+    "station": "Honolulu 1612340",
+    "status": "REPORTED",
+    "events": [
+      {
+        "date": "2026-10-14",
+        "time": "23:06",
+        "type": "L",
+        "ft": 0.2
+      },
+      {
+        "date": "2026-10-15",
+        "time": "07:13",
+        "type": "H",
+        "ft": 1.9
+      },
+      {
+        "date": "2026-10-15",
+        "time": "15:08",
+        "type": "L",
+        "ft": 0.6
+      },
+      {
+        "date": "2026-10-15",
+        "time": "18:03",
+        "type": "H",
+        "ft": 0.6
+      },
+      {
+        "date": "2026-10-16",
+        "time": "08:13",
+        "type": "H",
+        "ft": 1.8
+      }
+    ],
+    "phase": "Thursday: high 1.9 ft at 7:13 AM, falling to the 0.6 ft low at 3:08 PM, with only a tiny rise to a 0.6 ft high near 6:03 PM (USHarbors; effectively flat late afternoon). The late-night low (11:06 PM or 11:36 PM) conflicts between sources and is left out. Sunrise 6:27 AM, sunset 6:08 PM (NWS).",
+    "positives": [
+      "Most water over the reef in the early morning, around the 7:13 AM high",
+      "Falling tide through the morning keeps decent water until about 10 AM",
+      "Softer falls with more water"
+    ],
+    "conflict": "The only meaningful high is early morning; the afternoon stays low (0.6 ft) through sunset while the wind peaks and the new swell fills in, so there is no late-day tide rescue.",
+    "rule": "High tide is not automatically the best lesson time. Combine tide with swell, current, wind, water quality and the student."
+  },
+  "current": {
+    "state": "Moderate, variable; stronger on set cycles and in gusts",
+    "confidence": "Low",
+    "status": "INFERRED",
+    "drivers": [
+      "New 17–18 s south swell building through the day",
+      "Set-driven water movement on long-period sets",
+      "Cross-offshore ENE trades 15–20 kt (model gusts to 28 mph)",
+      "Canoes reef shape and tide (low water most of the afternoon)"
+    ],
+    "between_sets": "Light to moderate, with wind drift seaward from the start",
+    "during_sets": "Stronger push likely on long-period sets, more as the swell fills",
+    "post_set": "Drift after sets, added to wind drift",
+    "field_test": "Watch how far you and the student get moved by one full set, and how much work it takes to get back in position.",
+    "one_student": "Workable early if sets stay manageable inside and drift is light to moderate; stay close on set cycles.",
+    "multi_student": "Lower tolerance: long-period sets and gusty offshore drift can separate students quickly. Only early, only if drift is low and sets aren't reaching the inside."
+  },
+  "windows": [
+    {
+      "start": "06:45",
+      "end": "09:30",
+      "rating": "BEST",
+      "label": "Best of the day",
+      "go": "Go after a set-cycle, wind-drift and water-color check",
+      "reasons": [
+        "Around the 7:13 AM high (1.9 ft): most water over the reef of the day",
+        "Trades lightest early (model ENE 16–17 mph, gusts 22–24; NWS 15–20 kt)",
+        "New long-period swell still smaller early (model 1.6 ft at 18 s at Canoes; NWS 3–5 ft AM regional)"
+      ],
+      "precheck": [
+        "Water color (DOH list not read)",
+        "Several full set cycles (long lulls)",
+        "Wind drift",
+        "Thunder"
+      ],
+      "effort": {
+        "student": "Moderate",
+        "coach": "Moderate–high"
+      },
+      "notes": [
+        "Evening forecast: best compared with the rest of Thursday, but still CONDITIONAL; your morning on-site check decides."
+      ],
+      "workable_for": [
+        "One student",
+        "Small group of strong adults, if drift is low"
+      ],
+      "avoid_for": [
+        "Anyone if the water is discolored",
+        "Children if sets reach the inside or drift is noticeable"
+      ]
+    },
+    {
+      "start": "09:30",
+      "end": "13:00",
+      "rating": "CONDITIONAL",
+      "label": "Conditional",
+      "go": "Check wind drift, sets and reef depth",
+      "reasons": [
+        "Trades building (model 18–19 mph, gusts 25–26)",
+        "Tide falling toward the 0.6 ft low",
+        "Long-period swell starting to fill (model 1.9 ft at ~17 s by noon)"
+      ],
+      "effort": {
+        "student": "Moderate–high",
+        "coach": "High"
+      },
+      "workable_for": [
+        "One strong adult"
+      ],
+      "avoid_for": [
+        "Children",
+        "Several students"
+      ]
+    },
+    {
+      "start": "13:00",
+      "end": "18:00",
+      "rating": "AVOID",
+      "label": "Not recommended for beginners",
+      "go": "Not recommended for beginner lessons",
+      "reasons": [
+        "Strongest gusts of the day (model 19–20 mph, gusts 27–28), cross-offshore drift",
+        "Low tide all afternoon (0.6 ft at 3:08 PM, no real rise before sunset)",
+        "New south swell filling in: NWS 4–6 ft regional PM, more set-driven current"
+      ],
+      "effort": {
+        "student": "High",
+        "coach": "High"
+      },
+      "avoid_for": [
+        "Beginners generally",
+        "Children",
+        "Several students"
+      ]
+    }
+  ],
+  "avoid_triggers": [
+    "Brown, gray or cloudy water",
+    "Lightning or thunder",
+    "Flash Flood Warning or Flood Advisory",
+    "Repeated powerful long-period sets reaching Inside Canoes",
+    "Gusty trades pushing students seaward",
+    "Significant set-driven current or wind drift",
+    "Can't hold the teaching lane",
+    "Too much student retrieval",
+    "Too much instructor repositioning"
+  ],
+  "effort": [
+    {
+      "when": "Early morning, between sets",
+      "student": "Moderate",
+      "coach": "Moderate–high"
+    },
+    {
+      "when": "Long-period set cycles",
+      "student": "Moderate–high",
+      "coach": "High"
+    },
+    {
+      "when": "Late morning–afternoon, trades 15–20 kt, several students",
+      "student": "High",
+      "coach": "High"
+    }
+  ],
+  "effort_rule": "Your workload can't be read from wave height alone. Canoes may average 2–3 ft or less, but 17–18 s sets mean long lulls followed by sets that need hard repositioning, and 15–20 kt cross-offshore trades add steady seaward drift on top. Expect more instructor work than today even if the waves look similar.",
+  "boards": {
+    "canoes": [
+      {
+        "board": "Longboard",
+        "fit": "Favored"
+      },
+      {
+        "board": "Large soft top",
+        "fit": "Favored for lessons"
+      },
+      {
+        "board": "High-volume midlength",
+        "fit": "Good"
+      },
+      {
+        "board": "Performance shortboard",
+        "fit": "Poor fit at Canoes"
+      }
+    ],
+    "town": "Intermediate to experienced surfers; new 17–18 s south swell filling in, NWS south-facing 3–5 ft AM, 4–6 ft PM (exposed shores), groomed by cross-offshore trades but gusty. No Town size reading reached."
+  },
+  "weather": {
+    "sky": "Thursday: mostly sunny with scattered showers, high mid 80s (NWS surf zone forecast, Oʻahu, 3:35 PM Wed). Tonight: partly cloudy, scattered showers, low mid 70s.",
+    "showers": "Showers mostly windward and mauka; isolated showers Thursday afternoon over leeward waters (NWS coastal waters). Slightly wetter trade showers possible late Friday into the weekend (NWS discussion). No product read mentions thunder.",
+    "rain_pct": null,
+    "wind": "ENE 15–20 kt Thursday (NWS coastal waters, leeward Oʻahu); Oʻahu E 15–20 mph (NWS surf zone forecast)",
+    "upcoming": {
+      "when": "Thursday night through the weekend",
+      "items": [
+        "Friday: south swell may stay above seasonal average (NWS); ENE to 20 kt over leeward waters",
+        "Late Friday–weekend: wetter trade showers windward and mauka (NWS)",
+        "Weekend: trades locally strong; rough east-shore surf above seasonal average Saturday into early next week (NWS)",
+        "Saturday into early next week: south swell slowly declining (NWS)"
+      ],
+      "note": "Thursday's rain-chance percentage was not reached this run (left null)."
+    }
+  },
+  "alerts": [],
+  "watch": [
+    {
+      "head": "DOH advisory list not read this run",
+      "body": "The DOH Clean Water Branch advisory list (eha-cloud) could not be opened this evening (fifth run in a row), so no water-quality notice (Waikīkī, Oʻahu or statewide) is verified. The last read (Mon Oct 12 morning) showed none for Waikīkī and one open brown-water advisory at Bellows–Sherwood (Waimānalo, windward Oʻahu); its current status is unknown. News reports a new DOH brown-water advisory at ʻAnini Beach, Kauaʻi (Kauaʻi Now, Oct 13); not an Oʻahu notice. Check water color on arrival."
+    },
+    {
+      "head": "New long-period south swell Thursday",
+      "body": "NWS: new long-period south swell builds Thursday (18 s at 3 ft in the coastal waters forecast), south-facing shores 3–5 ft AM, 4–6 ft PM, possibly above seasonal average through Friday; below advisory level (Hawaii News Now). The 21 s forerunner at Canoes doubled today (0.4 to 0.8 ft, Surfline). Fewer, stronger sets."
+    },
+    {
+      "head": "Breezier trades",
+      "body": "NWS: ENE 15–20 kt Thursday, to 20 kt Thursday night and Friday, locally strong by the weekend. Model gusts at Canoes 22 mph early to 28 mph afternoon. Cross-offshore at Waikīkī: seaward drift."
+    },
+    {
+      "head": "Tsunami bulletin link on NWS hazards page",
+      "body": "The NWS Honolulu hazards page still lists a tsunami bulletin link dated Oct 10, 06:32 UTC; its live alert list did not load. The NWS discussion (3:54 AM Wed) lists no watches, warnings or advisories, so it is not treated as active."
+    }
+  ],
+  "hazards": [
+    {
+      "name": "Flood watch or warning",
+      "state": "NONE_VERIFIED",
+      "note": "NWS discussion (3:54 AM Wed): watches/warnings/advisories none. api.weather.gov not reachable; afternoon discussion not reached."
+    },
+    {
+      "name": "Flash flood warning",
+      "state": "NONE_VERIFIED",
+      "note": "None per NWS discussion (3:54 AM Wed); dry, stable weather."
+    },
+    {
+      "name": "Flood advisory, Oʻahu",
+      "state": "NONE_VERIFIED",
+      "note": "None per NWS discussion; alerts API not read."
+    },
+    {
+      "name": "High surf advisory, South Shore",
+      "state": "NONE_VERIFIED",
+      "note": "NWS surf zone forecast (3:35 PM Wed) lists none; Thursday south swell reinforcement described as below advisory level (Hawaii News Now). Alerts API not read."
+    },
+    {
+      "name": "High surf warning, South Shore",
+      "state": "NONE_VERIFIED"
+    },
+    {
+      "name": "Small craft advisory",
+      "state": "NONE_VERIFIED",
+      "note": "None listed for Oʻahu leeward waters (coastal waters 3:43 AM Wed); ENE to 20 kt Thursday night and Friday."
+    },
+    {
+      "name": "Thunderstorm or lightning warning",
+      "state": "NONE_VERIFIED",
+      "note": "No NWS product read mentions thunderstorms."
+    },
+    {
+      "name": "Wind advisory",
+      "state": "NONE_VERIFIED",
+      "note": "None per NWS discussion (3:54 AM Wed); trades breezy Thursday, locally strong by the weekend."
+    },
+    {
+      "name": "Tsunami",
+      "state": "NONE_VERIFIED",
+      "note": "No tsunami alert in the NWS discussion; an NWS bulletin link dated Oct 10 was not opened."
+    },
+    {
+      "name": "DOH brown water advisory, Waikīkī",
+      "state": "UNAVAILABLE",
+      "note": "DOH advisory list not reachable this run (fifth run in a row)."
+    }
+  ],
+  "tropical": {
+    "active": "None in the Central Pacific",
+    "note": "Central Pacific Tropical Weather Outlook, 2 PM HST Wed Oct 14 (via NHC): tropical cyclone formation not expected in the next 7 days. NHC is advising on Hurricane Simon (south-southeast of Baja California) and Tropical Storm Trudy (south of Acapulco), neither a Hawaiʻi threat."
+  },
+  "water": {
+    "status": "NOT_VERIFIED",
+    "inventory_verified": false,
+    "headline": "DOH advisory list not read this run; water quality at Canoes not verified",
+    "statement": "No DOH water-quality list (brown water, bacteria, sewage) could be read this evening, so nothing can be said about Waikīkī, Oʻahu or statewide notices for Thursday. The last list read (Mon morning) had none for Waikīkī and one open at Bellows–Sherwood (windward Oʻahu); that has not been re-verified. Not finding an advisory does not prove the water is clean. Check water color.",
+    "why": "The eha-cloud live list could not be fetched this run (fifth run in a row), and the Waikīkī Aquarium page that embeds it did not load the list. News: DOH brown-water advisory at ʻAnini Beach, Kauaʻi (Oct 13) and earlier Kauaʻi advisories; no Waikīkī or Oʻahu notice found in news searches, which proves nothing. Mostly dry weather with scattered windward showers (NWS) lowers runoff risk at Waikīkī but proves nothing.",
+    "checked": {
+      "brown_water": false,
+      "bacteria": false,
+      "sewage": false,
+      "beach": false
+    },
+    "runoff": "Brown, gray, cloudy or turbid water, or visible runoff: don't go in, advisory or not. DOH guidance: storm runoff can carry sewage and pathogens; coastal water usually needs about 48 hours to flush.",
+    "notices": []
+  },
+  "changes": {
+    "previous": {
+      "date": "2026-10-14",
+      "swell": "SSW 13 s fading (Wed morning, for Wed)",
+      "canoes_ft": "2–3 (Surfline)",
+      "period_s": 13
+    },
+    "items": [
+      "Day covered moves to Thursday; call stays CONDITIONAL, best window shifts slightly earlier to 6:45–9:30 AM to match the 7:13 AM high and lighter early wind",
+      "Afternoon now rated not recommended for beginners (this morning: conditional): stronger trades, low tide all afternoon, new swell filling",
+      "Swell character changing: 12–13 s SSW fading, 17–18 s south swell building; the 21 s forerunner at Canoes doubled today (0.4 to 0.8 ft, Surfline)",
+      "Wind up a step: ENE 15–20 kt Thursday (today up to 15 kt); model gusts to 28 mph in the afternoon",
+      "NWS south-facing regional now 3–5 ft AM, 4–6 ft PM for Thursday, possibly above seasonal average through Friday (this morning: 4–6 ft Wed)",
+      "CPHC refreshed (2 PM Wed): still no formation expected in 7 days; DOH list still not read (fifth run); buoys still unavailable"
+    ],
+    "next": "Morning run 6:26 AM Thu: same-morning Canoes read, how much of the long-period south swell has arrived, wind strength; retry the DOH list and buoys"
+  },
+  "sources": [
+    {
+      "name": "NWS Oʻahu surf zone forecast (weather.gov/hfo/srf, 3:35 PM HST Oct 14)",
+      "status": "Checked; south-facing 3–5 ft Thu AM, 4–6 ft Thu PM; new long-period south swell builds Thursday; tides and sunrise/sunset; no advisories listed"
+    },
+    {
+      "name": "NWS Honolulu forecast discussion (forecast.weather.gov, 3:54 AM HST Oct 14)",
+      "status": "Checked; watches/warnings/advisories none; afternoon issue not reached"
+    },
+    {
+      "name": "NWS coastal waters, Oʻahu leeward waters PHZ115 (via NDBC, 3:43 AM HST Oct 14)",
+      "status": "Checked; Thursday ENE 15–20 kt, south 3 ft at 18 s; afternoon issue not reached"
+    },
+    {
+      "name": "NWS active alerts (api.weather.gov)",
+      "status": "Not reachable"
+    },
+    {
+      "name": "NWS Honolulu hazards page (weather.gov/hfo/watchwarn)",
+      "status": "Live list did not load"
+    },
+    {
+      "name": "NWS Oʻahu surf observations (weather.gov/hfo/surfreports)",
+      "status": "Stale (Oct 8); not used"
+    },
+    {
+      "name": "NOAA tides, Honolulu 1612340",
+      "status": "NWS surf zone forecast tide table plus USHarbors (NOAA data); NOAA API not reachable"
+    },
+    {
+      "name": "NDBC 51212 / 51213 / 51211 / 51202, CDIP, PacIOOS",
+      "status": "Not reachable"
+    },
+    {
+      "name": "Central Pacific Tropical Weather Outlook (via NHC, 2 PM HST Oct 14)",
+      "status": "Checked; no formation expected in 7 days"
+    },
+    {
+      "name": "Hawaiʻi DOH Clean Water Branch advisory list (eha-cloud)",
+      "status": "Not reachable"
+    },
+    {
+      "name": "Waikīkī Aquarium page embedding the DOH list",
+      "status": "Reached; embedded list did not load"
+    },
+    {
+      "name": "Kauaʻi Now (Oct 13)",
+      "status": "Checked, news; reports DOH brown-water advisory at ʻAnini Beach, Kauaʻi"
+    },
+    {
+      "name": "Surfline Canoes",
+      "status": "Checked, third-party report; no timestamp shown (tide reading fits this evening)"
+    },
+    {
+      "name": "Surfnerd Queens/Canoes model (14 Oct 06z run)",
+      "status": "Checked, third-party model"
+    },
+    {
+      "name": "Hawaii News Now First Alert forecast (3:21 AM HST Oct 14)",
+      "status": "Checked, news; south swell reinforcement late Thursday below advisory level"
+    }
+  ],
+  "gaps": [
+    "DOH advisory list (brown water, bacteria, sewage) not read this run (fifth run in a row); water quality NOT_VERIFIED; Bellows–Sherwood status unknown",
+    "NWS active-alerts API and hazards page not reachable; alert status comes from the NWS discussion (3:54 AM Wed) and surf zone forecast (3:35 PM Wed)",
+    "NWS afternoon forecast discussion and afternoon coastal waters issue not reached",
+    "No south-shore buoy reading; offshore swell UNAVAILABLE",
+    "Canoes size and wind are from Surfline with no timestamp shown; no in-person observation; Thursday Canoes size is model-only",
+    "No NWS gust value for Thursday (gust left null); model gusts only",
+    "Thursday's rain-chance percentage not reached",
+    "Thursday 6:03 PM high (0.6 ft) from USHarbors only; Thursday late-night low conflicts between sources and is omitted",
+    "NWS tsunami bulletin dated Oct 10 not opened",
+    "Current is inferred, not measured"
+  ]
+}
