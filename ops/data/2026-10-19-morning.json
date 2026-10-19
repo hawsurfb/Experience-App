@@ -1,0 +1,558 @@
+{
+  "schema": "hss-ops/1",
+  "run": "MORNING",
+  "report_date": "2026-10-19",
+  "target_date": "2026-10-19",
+  "generated_at": "2026-10-19T06:50:00-10:00",
+  "next_update": "2026-10-19T18:26:00-10:00",
+  "beginner": {
+    "call": "CONDITIONAL",
+    "confidence": "Moderate for wind and timing, low for Canoes size and water quality. Fresh: NWS 6 AM Mon Oʻahu observations, NWS surf zone forecast (3:12 AM Mon), NWS point forecast and Honolulu Metro zone forecast (3:34 AM Mon), NWS forecast discussion (8:44 PM Sun), Central Pacific outlook (2 AM Mon), Surfline Canoes forecast and surf-forecast.com Waikīkī model (1 AM Mon), US Harbors listing of NOAA Honolulu 1612340 tides. Not reached: NOAA CO-OPS tide API, NWS alerts API, any south-shore buoy value, any Canoes observation from today, the DOH Clean Water Branch list (page did not render).",
+    "best_window": {
+      "start": "06:45",
+      "end": "09:00"
+    },
+    "headline": "Today (Mon Oct 19): conditional for beginners, best 6:45–9:00 AM. Canoes forecast 1–2 ft (knee to thigh, Surfline) on a small S/SW mix with 12 s and 15–17 s components. Trades already gusty at dawn (Honolulu NE 9 mph gusting 24 at 6 AM) and building to E 17–19 mph by mid-morning (NWS). Tide rising to the 11:26 AM high (1.8 ft). 9:00–11:00 AM conditional; from 11:00 AM not recommended.",
+    "recommendation": "Go early and keep it short if the wind is already pushing. At 6 AM Honolulu airport was NE 9 mph gusting 24 (much lighter than last evening's NE 18 gusting 32), and the NWS point forecast for Honolulu builds E 17 mph by 8 AM and 18–19 mph from late morning, so the lighter-wind window is the first two hours of daylight. Surf at Canoes looks small (Surfline 1–2 ft, knee to thigh; 'small leftovers, waist high and below'), but the mix includes 15–17 s energy, so watch several full set cycles (10+ minutes) before committing. NWS has scattered showers this morning (30% chance, Honolulu Metro) after night showers with some leeward spillover: check water color at Canoes and toward the Kūhiō drains and Ala Wai side; the DOH list could not be read. One student or a small group of strong adults; several students or children only if drift is low. Your on-site read overrides this report.",
+    "reasons": [
+      "NWS 6 AM Mon observations: Honolulu NE 9 mph gusting 24; Kalaeloa NE 6; Kāneʻohe MCB E 13 gusting 25",
+      "NWS point forecast, Honolulu (3:34 AM Mon): E 12 mph 5 AM, 17 mph 8 AM, 18 mph 11 AM, 19 mph 2–5 PM; showers chance through late morning",
+      "NWS Oʻahu surf zone forecast (3:12 AM Mon): south-facing 2–4 ft AM and PM (exposed shores, not Canoes); E 15–20 mph; mostly cloudy until noon, then mostly sunny, with showers",
+      "Surfline Canoes (LOTUS forecast): 1–2 ft, knee to thigh, poor to fair; S 1.8 ft at 12 s, S 0.9 ft at 15 s, SW 0.5 ft at 17 s; ENE 15 kt gusting 27 kt (model)",
+      "surf-forecast.com Waikīkī (1 AM Mon): about 1.5 ft at 17 s SW morning, 12–15 s afternoon; ENE 35–40 km/h",
+      "Honolulu tides today (NOAA 1612340 via US Harbors and NWS): low 0.6 ft 3:54 AM, high 1.8 ft 11:26 AM, low 0.3 ft 6:45 PM"
+    ],
+    "precheck": [
+      "Wind and drift at the beach (gusts to 24 mph at Honolulu at 6 AM; building through the morning)",
+      "Water color at Canoes and toward the Kūhiō storm drains and Ala Wai side (night and morning showers; no DOH list read)",
+      "Several full set cycles (10+ minutes): small, but 15–17 s components in the mix",
+      "Showers or thunder (no thunder in NWS products read)"
+    ],
+    "decisive": [
+      "How much gusty trade drift there is at Canoes when you arrive",
+      "Set size and inside push of the long-period components",
+      "Water clarity after night and morning showers",
+      "Drift and current",
+      "Student profile and number of students"
+    ],
+    "no_go": [
+      "Brown, gray, cloudy or turbid water",
+      "Any DOH brown-water or bacteria advisory covering Waikīkī",
+      "Lightning or thunder",
+      "Repeated long-period sets reaching Inside Canoes with force",
+      "Gusty trades pushing students seaward or along the lineup faster than you can recover them",
+      "Significant set-driven current or drift",
+      "Can't hold students in position"
+    ]
+  },
+  "general": {
+    "rating": "POOR",
+    "headline": "Small S/SW leftovers below seasonal average with breezy, gusty ENE trades: clean-ish early in Town, bumpier toward Diamond Head as trades build; poor to fair at best.",
+    "size_ft": "2–4 AM, 2–4 PM (NWS south-facing, Monday; surf zone forecast 3:12 AM)",
+    "size_note": "NWS numbers are for exposed south-facing shores. Canoes is far more protected: Surfline forecasts 1–2 ft (knee to thigh) at Canoes and surf-forecast.com about 1.5 ft at Waikīkī. Forecasts only: no Canoes observation or buoy reading this morning.",
+    "surface": "Fair to lightly textured early; textured and gusty from mid-morning as E trades reach 17–19 mph",
+    "favored": [
+      "Longboards / high-volume boards at protected Waikīkī breaks, early",
+      "Experienced surfers on exposed Town reefs early, before the trades peak; small, waist high and below with the odd bigger set (Surfline)"
+    ],
+    "waikiki_note": "No Waikīkī or Canoes observation found for today; latest NWS-relayed Waikīkī observation found is from Oct 14. Surfline forecasts Canoes 1–2 ft, knee to thigh. Expect small with lulls and occasional longer-period sets.",
+    "trend": "South swell continues a slow decline; south shore small through much of the week; moderate south-southwest swell expected next weekend (NWS). Trades moderate to locally windy through Tuesday, easing Tuesday–Wednesday, then gentle or disrupted, possibly southeast, Thursday–Friday (NWS)."
+  },
+  "canoes": {
+    "size_ft": "1–2",
+    "face": "Knee to thigh (Surfline forecast)",
+    "quality": "Poor to fair (Surfline forecast)",
+    "status": "FORECAST",
+    "note": "Surfline LOTUS forecast for Canoes, not an observation; no Canoes observation found this morning. Surf quality and lesson suitability are rated separately."
+  },
+  "breaks": [
+    {
+      "name": "Canoes (Surfline forecast, Mon)",
+      "ft": "1–2 ft, knee to thigh; S 1.8 ft 12 s, S 0.9 ft 15 s, SW 0.5 ft 17 s",
+      "zone": "Waikīkī"
+    },
+    {
+      "name": "Waikīkī (surf-forecast.com model, Mon)",
+      "ft": "About 1.5 ft at 17 s SW AM; 12–15 s PM (issued 1 AM Mon)",
+      "zone": "Waikīkī"
+    },
+    {
+      "name": "Oʻahu south-facing (NWS, Mon)",
+      "ft": "2–4 AM, 2–4 PM (NWS surf zone forecast 3:12 AM)",
+      "zone": "Town"
+    }
+  ],
+  "regional": {
+    "am_ft": "2–4",
+    "pm_ft": "2–4",
+    "status": "FORECAST",
+    "scope": "NWS Oʻahu surf zone forecast, south-facing shores, Monday Oct 19 (issued 3:12 AM HST Mon). Exposed shores only; never applies directly to Canoes."
+  },
+  "swell": {
+    "status": "FORECAST",
+    "components": [
+      {
+        "ft": 1.8,
+        "s": 12,
+        "deg": 185,
+        "dir": "S",
+        "role": "Primary per Surfline Canoes forecast (model); NWS: south swell in slow decline. No buoy reading"
+      },
+      {
+        "ft": 0.9,
+        "s": 15,
+        "deg": 177,
+        "dir": "S",
+        "role": "Secondary, long period (Surfline model)"
+      },
+      {
+        "ft": 0.5,
+        "s": 17,
+        "deg": 215,
+        "dir": "SW",
+        "role": "Small long-period SW (Surfline model; surf-forecast.com has 17 s SW as its main morning component)"
+      }
+    ],
+    "offshore": {
+      "ft": null,
+      "s": null,
+      "dir": null,
+      "source": "No south-shore buoy value read. NDBC blocked to this run; PacIOOS Kalaeloa (51212) page loads without values.",
+      "status": "UNAVAILABLE"
+    },
+    "trend": "South swell in slow decline; below seasonal average today (NWS)",
+    "trend_prev": "Sunday: NWS had the mid to long period SSW swell declining",
+    "trend_next": "Small through much of the week (NWS south-facing 1–3 ft Tuesday); moderate south-southwest swell expected next weekend",
+    "effects": [
+      "Lulls, then occasional sets above the average wave",
+      "15–17 s components push further inside and with more force than their size suggests",
+      "Set-driven current more likely on set cycles",
+      "Gusty ENE trades add lateral and seaward drift",
+      "North and east swells are mostly blocked at Waikīkī"
+    ],
+    "warning": "Don't treat today as low-energy because the surf is small. The mix includes 15–17 s energy: a calm lull can be followed by sets that reach Inside Canoes with force."
+  },
+  "wind": {
+    "dir": "NE",
+    "deg": 45,
+    "kt": 8,
+    "gust_kt": 21,
+    "status": "OBSERVED",
+    "effect": "NE to E trades are offshore to cross-offshore at Waikīkī: cleaner faces, but drift along the lineup and seaward for students and boards, stronger in gusts",
+    "forecast": "NWS point forecast, Honolulu (3:34 AM Mon): E 17 mph 8 AM, 18 mph 11 AM, 19 mph 2–5 PM, 17 mph evening. NWS surf zone forecast: E 15–20 mph today. Surfline model: ENE 15 kt gusting 27 kt. Small Craft Advisory until 6 AM Tuesday.",
+    "trend": "Building through the morning; moderate to locally windy through Tuesday (NWS point forecast E 18–21 mph Tuesday); easing Tuesday–Wednesday; gentle or disrupted, possibly southeast, Thursday–Friday (NWS)",
+    "note": "Observed 6 AM Mon at Honolulu airport (NWS roundup): NE 9 mph gusting 24 (8 kt gusting 21 kt). Airport, not Waikīkī. Last evening at 6 PM it was NE 18 gusting 32 mph."
+  },
+  "surface": {
+    "state": "Fair to lightly textured early; textured and gusty from mid-morning",
+    "drift": "Light to moderate at first light, gusty; moderate to strong along the lineup and seaward once trades reach 17–19 mph",
+    "limiting": "Gusty E to NE trades; long-period set components; water color after showers (no DOH list verified)",
+    "status": "INFERRED"
+  },
+  "tide": {
+    "station": "Honolulu 1612340",
+    "status": "REPORTED",
+    "events": [
+      {
+        "date": "2026-10-19",
+        "time": "00:01",
+        "type": "H",
+        "ft": 0.8
+      },
+      {
+        "date": "2026-10-19",
+        "time": "03:54",
+        "type": "L",
+        "ft": 0.6
+      },
+      {
+        "date": "2026-10-19",
+        "time": "11:26",
+        "type": "H",
+        "ft": 1.8
+      },
+      {
+        "date": "2026-10-19",
+        "time": "18:45",
+        "type": "L",
+        "ft": 0.3
+      },
+      {
+        "date": "2026-10-20",
+        "time": "00:39",
+        "type": "H",
+        "ft": 0.9
+      }
+    ],
+    "phase": "Rising from the 3:54 AM low (0.6 ft) to the 1.8 ft high at 11:26 AM, then falling to the 0.3 ft low at 6:45 PM (US Harbors listing of NOAA 1612340; the 11:26 AM 1.8 ft high also in the NWS surf zone forecast issued 3:12 AM today). NOAA CO-OPS API not reached. Sunrise 6:29 AM, sunset 6:05 PM (NWS).",
+    "positives": [
+      "Rising tide through the early window",
+      "Most water over the reef late morning, around the 11:26 AM high",
+      "Falling tide keeps decent water until about 2 PM"
+    ],
+    "conflict": "The 11:26 AM high lands when trades are near their daytime strength; the early window has less water but lighter wind. Afternoon pairs a falling tide toward 0.3 ft with E 19 mph trades.",
+    "rule": "High tide is not automatically the best lesson time. Combine tide with swell, current, wind, water quality and the student."
+  },
+  "current": {
+    "state": "Light to moderate between sets early; stronger on set cycles; wind drift moderate to strong once trades build",
+    "confidence": "Low",
+    "status": "INFERRED",
+    "drivers": [
+      "Small S/SW mix with 12 s and 15–17 s components (model)",
+      "Set-driven water movement on longer-period sets",
+      "Gusty NE to E trades, building to 17–19 mph",
+      "Canoes reef shape and tide (low water late afternoon)"
+    ],
+    "between_sets": "Light to moderate early; moderate once trades build",
+    "during_sets": "Stronger push likely on long-period sets",
+    "post_set": "Drift after sets, added to wind drift",
+    "field_test": "Watch how far you and the student get moved by one full set, and how much work it takes to get back in position.",
+    "one_student": "Workable early if sets stay manageable inside and drift is light to moderate; stay close on set cycles.",
+    "multi_student": "Lower tolerance: gusty wind drift and long-period sets can separate students quickly. Early only, and only if drift is low."
+  },
+  "windows": [
+    {
+      "start": "06:45",
+      "end": "09:00",
+      "rating": "BEST",
+      "label": "Best of the day",
+      "go": "Go after a wind, set-cycle and water-color check",
+      "reasons": [
+        "Lightest wind of the day (Honolulu NE 9 mph gusting 24 at 6 AM; E 17 mph forecast by 8 AM)",
+        "Rising toward the 11:26 AM high (1.8 ft)",
+        "Surf small (Canoes forecast 1–2 ft) but with 15–17 s components"
+      ],
+      "precheck": [
+        "Wind and drift at the beach",
+        "Water color after showers (no DOH list read)",
+        "Several full set cycles",
+        "Thunder"
+      ],
+      "effort": {
+        "student": "Low–moderate",
+        "coach": "Moderate"
+      },
+      "notes": [
+        "If gusts are already pushing students along the lineup, shorten the session or limit it to one strong adult."
+      ],
+      "workable_for": [
+        "One student",
+        "Small group of strong adults, if drift stays low"
+      ],
+      "avoid_for": [
+        "Anyone if the water is discolored",
+        "Children if drift is noticeable or sets reach the inside"
+      ]
+    },
+    {
+      "start": "09:00",
+      "end": "11:00",
+      "rating": "CONDITIONAL",
+      "label": "Conditional",
+      "go": "Check wind drift, sets and reef depth",
+      "reasons": [
+        "E trades 17–18 mph, gusty",
+        "More water over the reef toward the 11:26 AM high",
+        "Sets still include long-period energy"
+      ],
+      "effort": {
+        "student": "Moderate–high",
+        "coach": "High"
+      },
+      "workable_for": [
+        "One strong adult"
+      ],
+      "avoid_for": [
+        "Children",
+        "Several students"
+      ]
+    },
+    {
+      "start": "11:00",
+      "end": "18:00",
+      "rating": "AVOID",
+      "label": "Not recommended for beginners",
+      "go": "Not recommended for beginner lessons",
+      "reasons": [
+        "E trades 18–19 mph with leeward gusts (NWS point forecast; Surfline model gusts to 27 kt)",
+        "Long-period S/SW set components",
+        "Tide falling to 0.3 ft at 6:45 PM"
+      ],
+      "effort": {
+        "student": "High",
+        "coach": "High"
+      },
+      "avoid_for": [
+        "Beginners generally",
+        "Children",
+        "Several students"
+      ]
+    }
+  ],
+  "avoid_triggers": [
+    "Brown, gray or cloudy water",
+    "Lightning or thunder",
+    "Flash Flood Warning or Flood Advisory",
+    "Repeated powerful long-period sets reaching Inside Canoes",
+    "Gusty trades pushing students seaward or along the lineup",
+    "Significant set-driven current or wind drift",
+    "Can't hold the teaching lane",
+    "Too much student retrieval",
+    "Too much instructor repositioning"
+  ],
+  "effort": [
+    {
+      "when": "Early morning, lighter wind, between sets",
+      "student": "Low–moderate",
+      "coach": "Moderate"
+    },
+    {
+      "when": "Long-period set cycles",
+      "student": "Moderate–high",
+      "coach": "High"
+    },
+    {
+      "when": "Mid-morning onward, trades up, several students",
+      "student": "High",
+      "coach": "High"
+    }
+  ],
+  "effort_rule": "Your workload can't be read from wave height alone. Today the surf is small, but 15–17 s components still push inside, and with gusty trades building to 17–19 mph, wind drift will drive your repositioning work more than wave size.",
+  "boards": {
+    "canoes": [
+      {
+        "board": "Longboard",
+        "fit": "Favored"
+      },
+      {
+        "board": "Large soft top",
+        "fit": "Favored for lessons"
+      },
+      {
+        "board": "High-volume midlength",
+        "fit": "Good"
+      },
+      {
+        "board": "Performance shortboard",
+        "fit": "Poor fit at Canoes"
+      }
+    ],
+    "town": "Experienced surfers only; small leftovers, waist high and below with the odd bigger set (Surfline), NWS 2–4 ft exposed south shores; cleaner early in Town, bumpier toward Diamond Head as trades build."
+  },
+  "weather": {
+    "sky": "Partly cloudy at Honolulu at 6 AM, 77°F, NE 9 gusting 24 mph; mostly cloudy until noon, then mostly sunny, with showers (NWS Oʻahu surf zone forecast)",
+    "showers": "Honolulu Metro zone forecast (3:34 AM Mon): mostly sunny, breezy, scattered showers in the morning, 30% chance of rain. NWS discussion (8:44 PM Sun): showers mainly windward and mauka, a few reaching leeward areas, most numerous at night and early morning. No thunder mentioned.",
+    "rain_pct": 30,
+    "wind": "E 10–20 mph, breezy (Honolulu Metro zone forecast); E 15–20 mph (surf zone forecast)",
+    "upcoming": {
+      "when": "Tuesday through next weekend",
+      "items": [
+        "Small Craft Advisory until 6 AM Tuesday (NWS)",
+        "Tuesday: E around 20 mph, isolated showers (NWS)",
+        "Tuesday–Wednesday: trades gradually weaken (NWS)",
+        "Thursday–Friday: trades gentle or disrupted, southeast winds possible as a low passes north; showers may increase Friday into the weekend (NWS)",
+        "Next weekend: moderate south-southwest swell expected (NWS)"
+      ],
+      "note": "Rain percentage is the NWS Honolulu Metro zone value for today. Check water color at Waikīkī after any showers."
+    }
+  },
+  "alerts": [
+    {
+      "kind": "Small Craft Advisory",
+      "head": "Small Craft Advisory through early Tuesday morning",
+      "issuer": "NWS Honolulu",
+      "in_effect": "Until 6 AM HST Tue Oct 20 (NWS forecast discussion 8:44 PM Sun)",
+      "scope": "Most Hawaiian coastal waters and channels. A marine/boating advisory for offshore waters, not a surf advisory for Waikīkī beaches.",
+      "details": "Fresh to strong trades for the next couple of days; NWS expects to trim it to the windier waters around Maui and the Big Island later Tuesday. Canoes itself is sheltered from the trade swell."
+    }
+  ],
+  "watch": [
+    {
+      "head": "Water quality: DOH list not read this run; Waikīkī not verified",
+      "body": "The DOH Clean Water Branch list did not render for the fetch tool (brown water, bacteria and sewage all unread). News reports from Oct 16 described brown-water and bacteria advisories on the North Shore; status today not verified. Night and morning showers with some leeward spillover: check water color."
+    },
+    {
+      "head": "Gusty leeward trades",
+      "body": "Honolulu NE 9 mph gusting 24 at 6 AM; NWS builds E 17–19 mph today and 18–21 mph Tuesday; Surfline model gusts to 27 kt. No wind advisory found in NWS products read."
+    },
+    {
+      "head": "Small surf with long-period components",
+      "body": "Canoes forecast 1–2 ft (Surfline) with 15–17 s components. No high surf advisory in NWS products read. No buoy reading."
+    },
+    {
+      "head": "Pattern change late week",
+      "body": "NWS (8:44 PM Sun): a deepening low north of the islands from Thursday, southeast winds around Thursday, possibly more showers Friday into the weekend and a cold front around next Sunday or Monday. Not an advisory."
+    }
+  ],
+  "hazards": [
+    {
+      "name": "Flood watch or warning",
+      "state": "NONE_VERIFIED",
+      "note": "NWS discussion (8:44 PM Sun) lists only the Small Craft Advisory; Honolulu Metro zone forecast (3:34 AM Mon) shows no hazard headlines. NWS alerts API not reachable."
+    },
+    {
+      "name": "Flash flood warning",
+      "state": "NONE_VERIFIED",
+      "note": "None in NWS products read."
+    },
+    {
+      "name": "Flood advisory, Oʻahu",
+      "state": "NONE_VERIFIED",
+      "note": "None in products read; alerts API not read."
+    },
+    {
+      "name": "High surf advisory, South Shore",
+      "state": "NONE_VERIFIED",
+      "note": "Not in NWS headlines; south shore below seasonal average."
+    },
+    {
+      "name": "High surf warning, South Shore",
+      "state": "NONE_VERIFIED"
+    },
+    {
+      "name": "Small craft advisory",
+      "state": "ACTIVE",
+      "note": "Until 6 AM HST Tuesday; most Hawaiian coastal waters and channels (NWS 8:44 PM Sun)."
+    },
+    {
+      "name": "Thunderstorm or lightning warning",
+      "state": "NONE_VERIFIED",
+      "note": "No product read mentions thunderstorms."
+    },
+    {
+      "name": "Wind advisory",
+      "state": "NONE_VERIFIED",
+      "note": "None in NWS headlines or the Honolulu Metro zone forecast."
+    },
+    {
+      "name": "Tsunami",
+      "state": "NONE_VERIFIED",
+      "note": "Nothing in NWS forecast products read; tsunami center not checked."
+    },
+    {
+      "name": "DOH brown water advisory, Waikīkī",
+      "state": "UNAVAILABLE",
+      "note": "DOH list did not render for the fetch tool this run."
+    },
+    {
+      "name": "DOH bacteria or sewage advisory, Waikīkī",
+      "state": "UNAVAILABLE",
+      "note": "Bacteria and sewage lists not readable."
+    }
+  ],
+  "tropical": {
+    "active": "None in the Central Pacific",
+    "note": "Central Pacific Tropical Weather Outlook (2 AM HST Mon Oct 19): tropical cyclone formation is not expected during the next 7 days."
+  },
+  "water": {
+    "status": "NOT_VERIFIED",
+    "inventory_verified": false,
+    "headline": "DOH list not readable this run: Waikīkī not verified either way; morning showers with some leeward spillover",
+    "statement": "The DOH Clean Water Branch advisory list (brown water, bacteria, sewage) did not render this morning, so no Waikīkī, Oʻahu or statewide advisory status is verified. News reports from Oct 16 describe brown-water and bacteria advisories on Oʻahu's North Shore; not confirmed today. Not finding an advisory does not prove the water is clean. Check water color.",
+    "why": "The DOH eha-cloud list loads as an empty template for the fetch tool. NWS has scattered morning showers (30% Honolulu Metro) after night showers with some spillover to leeward areas, which raises runoff risk at Waikīkī.",
+    "checked": {
+      "brown_water": false,
+      "bacteria": false,
+      "sewage": false,
+      "beach": false
+    },
+    "runoff": "Brown, gray, cloudy or turbid water, or visible runoff: don't go in, advisory or not. DOH guidance: storm runoff can carry sewage and pathogens; avoid contact with affected water after rain.",
+    "notices": [
+      {
+        "scope": "Oʻahu",
+        "head": "Brown-water and bacteria advisories, North Shore — reported in news Oct 16, not read on the DOH list, status today not verified",
+        "issued": "2026-10-16"
+      }
+    ]
+  },
+  "changes": {
+    "previous": {
+      "date": "2026-10-18",
+      "swell": "Model only: SW ~1.3 ft at 17 s AM, 15 s PM (Waikīkī), Sun evening outlook for Mon; no buoy",
+      "canoes_ft": "UNAVAILABLE (model ~1.3)",
+      "period_s": 17
+    },
+    "items": [
+      "Same-morning report for Mon Oct 19; call stays CONDITIONAL, best window now 6:45–9:00 AM (was 6:45–9:30) and not recommended from 11:00 AM (was 11:30), because NWS builds E 17 mph by 8 AM",
+      "Wind lighter at dawn than last evening: Honolulu NE 9 gusting 24 mph at 6 AM vs NE 18 gusting 32 at 6 PM Sun",
+      "Canoes now has a forecast: Surfline 1–2 ft knee to thigh, with a 12 s S component on top of 15–17 s energy (evening had model only)",
+      "NWS south-facing today raised to 2–4 ft in the 3:12 AM surf zone forecast (evening cited 1–3 ft from an older product); exposed shores only",
+      "Rain chance now 30% this morning (Honolulu Metro); Small Craft Advisory unchanged to 6 AM Tuesday; no tropical formation expected",
+      "Water: DOH list still not readable"
+    ],
+    "next": "Evening run 6:26 PM Mon covers Tuesday: afternoon wind peak, shower totals, Tuesday tides (12:10 PM high); retry buoys, alerts API, NOAA tides and the DOH list"
+  },
+  "sources": [
+    {
+      "name": "NWS Honolulu forecast discussion (8:44 PM HST Oct 18, weather.gov/hfo/AFD)",
+      "status": "Checked: moderate to locally windy trades through Tuesday; leeward spillover showers; south swell declining; SCA until 6 AM Tue; late-week pattern change. No newer issuance seen"
+    },
+    {
+      "name": "NWS Surf Zone Forecast for Hawaii (3:12 AM HST Oct 19, tgftp)",
+      "status": "Checked: Oʻahu south-facing 2–4 ft today, 1–3 ft Tue; E 15–20 mph; tides; sunrise/sunset"
+    },
+    {
+      "name": "NWS Point Forecast Matrix, Honolulu (3:34 AM HST Oct 19)",
+      "status": "Checked: hourly E wind 12–19 mph today, 16–21 mph Tue"
+    },
+    {
+      "name": "NWS Honolulu Metro zone forecast (3:34 AM HST Oct 19)",
+      "status": "Checked: breezy, scattered morning showers, 30% rain, no hazard headlines"
+    },
+    {
+      "name": "NWS Regional Weather Roundup (6 AM HST Oct 19)",
+      "status": "Checked: Oʻahu wind/sky observations"
+    },
+    {
+      "name": "NWS active alerts (api.weather.gov) and weather.gov/hfo/watchwarn",
+      "status": "Not reachable / alert list did not load; advisories taken from the NWS discussion and zone forecast headlines"
+    },
+    {
+      "name": "NWS Oʻahu surf observations (weather.gov/hfo/surfreports)",
+      "status": "Checked; latest Waikīkī entry is Oct 14, stale"
+    },
+    {
+      "name": "NOAA CO-OPS tides API, Honolulu 1612340",
+      "status": "Not reachable; tides from US Harbors (NOAA station listing) and NWS surf zone forecast, which agree"
+    },
+    {
+      "name": "NDBC/CDIP 51212, 51211, 51213, 51202",
+      "status": "No values: NDBC blocked; PacIOOS Kalaeloa page loads without values"
+    },
+    {
+      "name": "Central Pacific Tropical Weather Outlook (2 AM HST Oct 19, nhc.noaa.gov)",
+      "status": "Checked: no formation expected in 7 days"
+    },
+    {
+      "name": "Hawaiʻi DOH Clean Water Branch advisory list (eha-cloud)",
+      "status": "Not readable (page rendered as an empty template)"
+    },
+    {
+      "name": "Star-Advertiser (Oct 16): North Shore brown-water/bacteria advisories",
+      "status": "Headline seen in search; article did not load"
+    },
+    {
+      "name": "Surfline Canoes report/forecast",
+      "status": "Checked: LOTUS forecast 1–2 ft, swell components, model wind; forecaster notes (no update time shown)"
+    },
+    {
+      "name": "surf-forecast.com Waikīkī (1 AM Oct 19)",
+      "status": "Checked, third-party model"
+    },
+    {
+      "name": "Hawaii News Now First Alert forecast (3:23 AM Oct 19)",
+      "status": "Checked: breezy trades through Tuesday; no advisories mentioned"
+    }
+  ],
+  "gaps": [
+    "No Canoes or Waikīkī observation for today; Canoes size is a Surfline forecast",
+    "No south-shore buoy value; offshore swell UNAVAILABLE",
+    "DOH brown-water, bacteria and sewage lists not read; water quality not verified",
+    "NWS active-alerts API not reachable; alerts verified from NWS text products only",
+    "NOAA CO-OPS tide API not reached (tides from US Harbors and NWS)",
+    "No NWS forecast discussion newer than 8:44 PM Sun seen",
+    "No gust forecast for Waikīkī (Surfline model only)",
+    "Tsunami center not checked",
+    "Current is inferred, not measured"
+  ]
+}
